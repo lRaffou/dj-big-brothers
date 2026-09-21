@@ -141,3 +141,15 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 
 /* Constrain aspect-ratio images to their grid track on narrow screens. */
 .portrait,.hero-photo{width:100%;min-width:0}
+
+/* Two identical groups create a seamless, constant-speed loop. */
+.ribbon{position:relative;display:block;padding:0}
+.ribbon-track{display:flex;width:max-content;animation:ribbon-slide 28s linear infinite}
+.ribbon-group{display:flex;align-items:center;justify-content:space-around;flex:0 0 auto;min-width:100vw;gap:2rem;padding:.8rem 2rem .8rem 0}
+.ribbon-group span{white-space:nowrap}
+.ribbon-toggle{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);width:2.75rem;height:2.75rem;border:1px solid #14141455;background:var(--accent);color:#141414;font:700 1rem/1 Arial,sans-serif;cursor:pointer;border-radius:50%}
+.ribbon-toggle:focus-visible{outline-color:#141414;outline-offset:2px}
+.ribbon.is-paused .ribbon-track{animation-play-state:paused}
+@keyframes ribbon-slide{to{transform:translateX(-50%)}}
+@media(min-width:48rem){.ribbon-group{gap:3.5rem;padding:1rem 3.5rem 1rem 0}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{animation:none}.ribbon-toggle{display:none}}

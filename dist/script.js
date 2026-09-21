@@ -8,3 +8,12 @@ form.addEventListener('submit', (event) => {
   window.location.href = `mailto:djbigbrothers.music@gmail.com?subject=${encodeURIComponent(`Mariage du ${date} — demande de devis`)}&body=${encodeURIComponent(body)}`;
   document.querySelector('#form-status').textContent = 'Votre brouillon est prêt dans votre messagerie. Si elle ne s’ouvre pas, écrivez à djbigbrothers.music@gmail.com ou appelez le 06 98 96 46 79.';
 });
+
+const ribbon = document.querySelector('.ribbon');
+const ribbonToggle = document.querySelector('.ribbon-toggle');
+ribbonToggle.addEventListener('click', () => {
+  const paused = ribbon.classList.toggle('is-paused');
+  ribbonToggle.setAttribute('aria-pressed', String(paused));
+  ribbonToggle.setAttribute('aria-label', paused ? 'Reprendre le défilement' : 'Mettre le défilement en pause');
+  ribbonToggle.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
+});
