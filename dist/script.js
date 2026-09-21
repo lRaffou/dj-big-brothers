@@ -17,3 +17,13 @@ ribbonToggle.addEventListener('click', () => {
   ribbonToggle.setAttribute('aria-label', paused ? 'Reprendre le défilement' : 'Mettre le défilement en pause');
   ribbonToggle.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
 });
+
+const backToTop = document.querySelector('.back-to-top');
+const updateBackToTop = () => { backToTop.hidden = window.scrollY < 400; };
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+window.addEventListener('pageshow', updateBackToTop);
+updateBackToTop();
+backToTop.addEventListener('click', () => {
+  document.querySelector('#haut').focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+});
