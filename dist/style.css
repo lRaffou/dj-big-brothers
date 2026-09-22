@@ -147,7 +147,9 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .ribbon-track{display:flex;width:max-content;animation:ribbon-slide 28s linear infinite}
 .ribbon-group{display:flex;align-items:center;justify-content:space-around;flex:0 0 auto;min-width:100vw;gap:2rem;padding:.8rem 2rem .8rem 0}
 .ribbon-group span{white-space:nowrap}
-.ribbon-toggle{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);width:2.75rem;height:2.75rem;border:1px solid #14141455;background:var(--accent);color:#141414;font:700 1rem/1 Arial,sans-serif;cursor:pointer;border-radius:50%}
+.ribbon-toggle{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:2.75rem;height:2.75rem;padding:0;border:0;background:var(--accent);color:#141414b3;cursor:pointer;border-radius:0}
+.ribbon-toggle span{font:400 .875rem/1 Arial,sans-serif;letter-spacing:0}
+.ribbon-toggle:hover,.ribbon-toggle:focus-visible{color:#141414}
 .ribbon-toggle:focus-visible{outline-color:#141414;outline-offset:2px}
 .ribbon.is-paused .ribbon-track{animation-play-state:paused}
 @keyframes ribbon-slide{to{transform:translateX(-50%)}}
