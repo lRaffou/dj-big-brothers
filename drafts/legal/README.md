@@ -1,6 +1,6 @@
 # Pages juridiques Big Brothers — brouillons
 
-Ces fichiers restent hors de dist/ et ne sont pas publiés sur GitHub Pages. Ouvrir [preview.html](preview.html) pour examiner leur intégration. Polices et design conservés.
+Ces fichiers sont les versions de travail détaillées, avec les champs à compléter. Des versions publiques provisoires sont désormais dans dist/ et accessibles depuis le footer, à la demande du propriétaire. Elles présentent les faits disponibles et signalent les informations manquantes, sans afficher les notes de rédaction. Elles ne constituent pas des documents complets ou validés. Ouvrir [preview.html](preview.html) pour examiner les versions de travail. Polices et design conservés.
 
 ## Informations retenues après le retour du client
 

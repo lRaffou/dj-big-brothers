@@ -1,6 +1,6 @@
 # Dernières informations pour finaliser les pages Big Brothers
 
-Les trois pages et leur intégration sont préparées dans [l’aperçu](preview.html). Elles restent en brouillon tant que les informations suivantes manquent. Les polices et le design sont conservés.
+Les trois pages et leur intégration sont préparées dans [l’aperçu](preview.html). Les versions complètes restent en brouillon ; des versions publiques provisoires sont accessibles depuis le footer et signalent les informations manquantes. Les polices et le design sont conservés.
 
 ## Déjà renseigné — inutile de le redemander
 
