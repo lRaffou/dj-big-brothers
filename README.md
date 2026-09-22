@@ -2,9 +2,9 @@
 
 Site vitrine de Thao, DJ Big Brothers, pour les mariages à Toulouse, Montauban et dans les environs.
 
-[Consulter le site](https://dj-big-brothers.raffou2.chatgpt.site) · [Sources des contenus](SOURCES.md)
+[Consulter le site](https://lraffou.github.io/dj-big-brothers/) · [Déploiements](https://github.com/lRaffou/dj-big-brothers/actions/workflows/pages.yml) · [Sources des contenus](SOURCES.md)
 
-Le site est actuellement hébergé sur Sites avec un accès privé. La visibilité du dépôt GitHub et celle du site sont indépendantes.
+Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée existe aussi sur [Sites](https://dj-big-brothers.raffou2.chatgpt.site) ; sa publication est indépendante.
 
 ## Fonctionnalités
 
@@ -40,6 +40,8 @@ Ouvrir ensuite [http://localhost:8080](http://localhost:8080). Sur Windows, util
 .
 ├── README.md
 ├── SOURCES.md             # Provenance des textes, tarifs et photos
+├── .github/workflows/
+│   └── pages.yml         # Publication automatique sur GitHub Pages
 ├── .openai/hosting.json   # Identifiant Sites et dossier statique
 └── dist/
     ├── index.html        # Structure, textes, tarifs et coordonnées
@@ -89,14 +91,21 @@ node --check dist/script.js
 
 ## Hébergement
 
-Le site utilise Sites. Le fichier `.openai/hosting.json` référence le projet existant et déclare `dist/` comme dossier statique à publier.
+Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) publie uniquement le contenu de `dist/` sur GitHub Pages, sans compilation.
 
-Le dépôt GitHub conserve les sources et leur historique. Aucun workflow GitHub Actions de déploiement n’est configuré : un envoi sur GitHub ne met pas automatiquement à jour le site hébergé. La publication se fait séparément via Sites.
+- Une modification de `dist/` ou du workflow envoyée sur `main` déclenche une publication.
+- Une modification du README seul ne déclenche pas de publication du site.
+- Pour republier manuellement : **Actions → Publish website to GitHub Pages → Run workflow**, puis sélectionner `main`.
+- Dans **Settings → Pages**, la source de publication est **GitHub Actions**.
 
-Le contenu de `dist/` peut également être servi par un hébergeur de sites statiques, en conservant les chemins relatifs des fichiers.
+Suivre le résultat et les erreurs éventuelles dans les [exécutions du workflow](https://github.com/lRaffou/dj-big-brothers/actions/workflows/pages.yml). Le site est accessible à [lraffou.github.io/dj-big-brothers](https://lraffou.github.io/dj-big-brothers/) après une exécution réussie.
+
+Conserver les chemins relatifs des styles, scripts, images et polices pour que le site fonctionne sous `/dj-big-brothers/`.
+
+Le fichier `.openai/hosting.json` référence la copie Sites existante. Un envoi sur GitHub ne met pas à jour cette copie : sa publication se fait séparément via Sites. Ce fichier n’est pas inclus dans le site GitHub Pages.
 
 ## Contenus et droits
 
-Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des images. Vérifier les tarifs, conditions commerciales et mentions légales avant l’ouverture au public.
+Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des images. Les tarifs, conditions commerciales et mentions légales doivent être validés et tenus à jour par le propriétaire du site.
 
 Les licences des polices figurent dans leurs fichiers OFL. Aucune licence générale de réutilisation du code, des photos ou des contenus n’est accordée par ce dépôt.
