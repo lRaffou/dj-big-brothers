@@ -10,7 +10,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 
 - Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
 - Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
-- Extraits d’avis et module officiel Mariages.net, chargé uniquement au clic dans un iframe isolé, avec désactivation et lien de secours. Les compteurs figés ont été retirés. Le module demande les données à Mariages.net ; aucun compteur du site n’est synchronisé séparément. Le service a renvoyé HTTP 403 lors des essais du 22 septembre 2026 : son rendu réel et le compteur restent à vérifier depuis un navigateur accepté par Mariages.net.
+- Extraits d’avis et résumé compact cliquable : cinq étoiles dorées, 30 avis, note 5.0 sur 5. Valeurs renseignées manuellement à partir de la capture fournie ; aucune synchronisation automatique ni aucun script Mariages.net intégré.
 - Questions fréquentes et détails dépliables.
 - Formulaire préparant une demande de devis par e-mail.
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
@@ -51,8 +51,6 @@ Ouvrir ensuite [http://localhost:8080](http://localhost:8080). Sur Windows, util
     ├── index.html        # Structure, textes, tarifs et coordonnées
     ├── style.css         # Apparence, responsive et animations
     ├── script.js         # Formulaire, bannière et retour en haut
-    ├── avis-mariages.html # Document isolé du module officiel
-    ├── avis-mariages.js   # Chargement, secours et hauteur du module
     ├── fonts.css         # Déclarations des polices locales
     ├── robots.txt
     └── assets/

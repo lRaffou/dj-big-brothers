@@ -27,36 +27,3 @@ backToTop.addEventListener('click', () => {
   document.querySelector('#haut').focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 });
-
-// Load the third-party module only at the visitor's request; no stored preference.
-const reviewsSection = document.querySelector('.live-reviews');
-if (reviewsSection) {
-  const toggle = reviewsSection.querySelector('.reviews-toggle');
-  const embed = reviewsSection.querySelector('#reviews-embed');
-  let frame = null;
-  toggle.hidden = false;
-  toggle.addEventListener('click', () => {
-    if (frame) {
-      frame.remove();
-      frame = null;
-      embed.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.textContent = 'Afficher les avis Mariages.net';
-      return;
-    }
-    frame = document.createElement('iframe');
-    frame.title = 'Avis Big Brothers — module officiel Mariages.net';
-    frame.setAttribute('sandbox', 'allow-scripts allow-popups allow-popups-to-escape-sandbox');
-    frame.referrerPolicy = 'no-referrer';
-    frame.src = reviewsSection.dataset.reviewsSrc;
-    embed.hidden = false;
-    embed.append(frame);
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.textContent = 'Masquer les avis Mariages.net';
-  });
-  window.addEventListener('message', (event) => {
-    if (!frame || event.source !== frame.contentWindow || event.data?.type !== 'big-brothers-reviews-height') return;
-    const height = event.data.height;
-    if (Number.isFinite(height)) frame.style.height = Math.min(2400, Math.max(180, height)) + 'px';
-  });
-}
