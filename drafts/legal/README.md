@@ -7,7 +7,7 @@ Ces fichiers restent hors de dist/ et ne sont pas publiés sur GitHub Pages. Ouv
 - L’activité présentée est une agence de DJs ; les conditions vidéo sont écartées.
 - Les anciennes désignations de YO Production comme éditeur, vendeur et responsable des données sont retirées, ainsi que la direction de publication précédemment proposée à partir du site vidéo.
 - REGARTS (REG@RTS), association loi 1901 ou assimilée, est identifiée comme organisme de facturation : SIREN 501 634 505 ; SIRET 501 634 505 00033 ; 7 rue Bernard Palissy, 31200 Toulouse ; TVA FR34501634505. Ces informations ont été recoupées avec la fiche publique Societe.com fournie.
-- Deux ans est la durée de conservation annoncée. Les données concernées et le point de départ doivent être précisés ; cette durée ne remplace pas les obligations d’archivage des pièces comptables.
+- Deux ans est la durée de conservation annoncée pour les demandes de devis et dossiers clients, selon la précision du propriétaire. Le point de départ doit être précisé ; cette durée ne remplace pas les obligations d’archivage des pièces comptables.
 - La facture privée n’est ni copiée ni publiée : aucun nom ou adresse de client, numéro de dossier, montant individuel, détail bancaire ou image source ne doit être ajouté au dépôt.
 
 ## Informations encore nécessaires
@@ -16,8 +16,12 @@ Ces fichiers restent hors de dist/ et ne sont pas publiés sur GitHub Pages. Ouv
 2. Rôle exact de REGARTS dans le contrat : prestataire contractuel, mandataire de facturation ou autre cadre. Obtenir le modèle de devis/contrat DJ et les CGV applicables, sans données de clients.
 3. Médiateur de la consommation effectivement désigné : nom, adresse et site. Demander à REGARTS si son dispositif couvre ces contrats. Le prestataire ne peut pas être médiateur de ses propres litiges.
 4. Réservation, avance (nature et montant), échéances, paiement, annulation/report et rétractation. Une facture particulière ne suffit pas à généraliser une règle commerciale ou un taux de TVA.
-5. Responsable des données et répartition des rôles avec REGARTS ; catégories couvertes par les deux ans et point de départ ; messagerie/gestion, éventuels transferts et durées d’archivage.
-6. Téléphone officiel de GitHub, hébergeur, à vérifier avant publication des mentions.
+5. Responsable des données et répartition des rôles avec REGARTS ; point de départ des deux ans ; messagerie/gestion, éventuels transferts et durées d’archivage.
+Les coordonnées de GitHub Pages ont été complétées, téléphone +1 877 448 4820 recoupé dans les sources listées ci-dessous. La synthèse des quatre réponses à obtenir figure dans [A_COMPLETER.md](A_COMPLETER.md).
+
+## Vérification technique effectuée
+
+Sur le site public : seules des requêtes vers lraffou.github.io ont été observées, aucun cookie ni stockage local ou de session, aucun iframe/vidéo intégrée et un seul script local. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
 
 ## Intégration après résolution
 
@@ -33,5 +37,8 @@ Compléter les champs entre crochets puis retirer les notes de rédaction. Copie
 - https://www.cnil.fr/fr/passer-laction/les-durees-de-conservation-des-donnees
 - https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 - https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
+- https://opensource.michelin.io/legal-notice/ : coordonnées de GitHub Pages publiées dans la rubrique hébergeur.
+- https://www.datarequests.org/company/github/ : recoupement du numéro de téléphone (contact commercial, pas promesse d’assistance téléphonique).
+- https://policies.google.com/privacy?hl=fr : confidentialité de la messagerie Google.
 
 Les PDF vidéo fournis précédemment ne sont plus la base juridique de l’activité DJ. Les brouillons ne constituent pas une validation de conformité.
