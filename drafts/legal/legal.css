@@ -1,0 +1,13 @@
+/* Same approved local font families and weights as the main site. */
+.legal-content{max-width:58rem;padding-block:2rem 4rem}
+.legal-content h1{font:700 clamp(2.75rem,9vw,4.5rem)/1.06 'Barlow Condensed','Arial Narrow',sans-serif;margin:0 0 2.5rem;hyphens:none}
+.legal-content h2{font-size:2rem;margin:0 0 1rem}
+.legal-content section+section{margin-top:2.5rem}
+.legal-content p,.legal-content dd{color:var(--muted)}
+.legal-content a{text-decoration:underline;text-underline-offset:.2em}
+.legal-content dt{font-weight:600;margin-top:1rem}
+.legal-content dd{margin:.25rem 0 0}
+.legal-content .draft-note{border-left:2px solid var(--accent);padding:.75rem 1rem;background:var(--panel);font-size:.875rem;color:var(--text)}
+.legal-links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;width:100%;font-size:.875rem;color:var(--muted)}
+.legal-links a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.2em}
+.legal-links a:hover,.legal-links a[aria-current="page"]{color:var(--text)}
