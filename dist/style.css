@@ -163,3 +163,15 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .back-to-top[hidden]{display:none}
 #haut:focus{outline:none}
 @media(hover:hover){.back-to-top:hover{background:var(--accent);color:var(--bg)}}
+
+/* Agency content uses the existing typography and mobile-first layout. */
+.agency-services{margin-top:2rem}
+.agency-services>p,.agency-services li{color:var(--muted)}
+.agency-services ul{display:grid;grid-template-columns:minmax(0,1fr);gap:.65rem 2rem;padding-left:1.25rem;margin-block:1.5rem}
+.agency-services li::marker{color:var(--accent)}
+.about .agency-residency{border-left:2px solid var(--accent);padding-left:1rem}
+.agency-team{grid-column:1/-1;border-top:1px solid var(--line);padding-top:1.5rem;min-width:0}
+.agency-team h3{margin-top:0}
+.agency-team ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;list-style:none;padding:0;margin:1.5rem 0}
+.agency-team li{border:1px solid var(--line);padding:1rem;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
+@media(min-width:48rem){.agency-services ul{grid-template-columns:repeat(2,minmax(0,1fr))}.agency-team ul{grid-template-columns:repeat(4,minmax(0,1fr))}}

@@ -1,6 +1,6 @@
 # DJ Big Brothers
 
-Site vitrine de Thao, DJ Big Brothers, pour les mariages à Toulouse, Montauban et dans les environs.
+Site vitrine de Big Brothers, agence de DJs et de solutions musicales pour les mariages, soirées privées et événements professionnels à Toulouse, Montauban et dans les environs. Équipe : Sophie, Yoan, Thao et Yo.
 
 [Consulter le site](https://lraffou.github.io/dj-big-brothers/) · [Déploiements](https://github.com/lRaffou/dj-big-brothers/actions/workflows/pages.yml) · [Sources des contenus](SOURCES.md)
 
@@ -8,8 +8,8 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 
 ## Fonctionnalités
 
-- Présentation du DJ et des prestations : cérémonie laïque, vin d’honneur et soirée dansante.
-- Formules Fiesta et Festival, tarifs et options détaillées.
+- Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
+- Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
 - Avis clients et lien vers la fiche Mariages.net.
 - Questions fréquentes et détails dépliables.
 - Formulaire préparant une demande de devis par e-mail.
