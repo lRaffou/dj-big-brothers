@@ -21,7 +21,7 @@ Les coordonnées de GitHub Pages ont été complétées, téléphone +1 877 448 
 
 ## Vérification technique effectuée
 
-Sur le site public : seules des requêtes vers lraffou.github.io ont été observées, aucun cookie ni stockage local ou de session, aucun iframe/vidéo intégrée et un seul script local. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
+Avant activation du module d’avis : seules des ressources du site sont chargées, aucun cookie ni stockage local ou de session n’est ajouté par son code. Le module officiel Mariages.net est désormais proposé au clic dans un iframe isolé et peut être retiré avec le même bouton. Après activation, des requêtes sont envoyées à Mariages.net ; les traitements du tiers restent à vérifier (HTTP 403 lors des essais). Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
 
 ## Intégration après résolution
 

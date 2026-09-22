@@ -12,4 +12,4 @@ Texte fourni directement par le propriétaire : Big Brothers devient une agence 
 
 ## Nombre d’avis
 
-Le nombre affiché a été corrigé à 30 avis (note 5/5) d’après la capture Mariages.net fournie par le propriétaire. Cette valeur reste manuelle : aucune synchronisation automatique n’est activée. Mariages.net présente un module officiel d’affichage des avis sur https://www.mariages.net/emp-AccesoReviews.php ; son code d’intégration propre au prestataire doit être obtenu et inspecté avant de confirmer le fonctionnement du compteur et de l’intégrer.
+La capture fournie par le propriétaire montre 30 avis et une note de 5/5. Les compteurs figés ont été retirés lors de l’intégration du module officiel fourni ensuite (wpShowReviews, prestataire 265589, thème black). Le badge wp-rated fourni dans le même message n’est pas ajouté, afin de ne pas dupliquer les éléments de réassurance. Le module se charge au clic, avec lien de secours ; son script renvoie HTTP 403 dans l’environnement de vérification, donc le rendu réel et la présence du compteur ne sont pas confirmés. Source du service : https://www.mariages.net/emp-AccesoReviews.php .
