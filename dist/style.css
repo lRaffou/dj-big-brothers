@@ -177,9 +177,10 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 @media(min-width:48rem){.agency-services ul{grid-template-columns:repeat(2,minmax(0,1fr))}.agency-team ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 /* Compact review summary; values are maintained manually from Mariages.net. */
-.compact-rating{display:inline-flex;flex-direction:column;gap:.15rem;width:fit-content;min-height:2.75rem;justify-content:center;font-size:.875rem;line-height:1.5}
-.compact-rating-top{display:flex;align-items:center;gap:.6rem}
-.compact-rating .stars{color:#d69b00;letter-spacing:0;font-size:1.125rem;line-height:1}
+.compact-rating{display:inline-flex;flex-direction:column;gap:.4rem;width:fit-content;min-height:2.75rem;justify-content:center;font-size:.875rem;line-height:1.5}
+.compact-rating-top{display:flex;align-items:center;gap:1rem}
+.compact-rating .stars{color:#d69b00;letter-spacing:.08rem;font-size:1.125rem;line-height:1}
 .compact-rating-score{align-self:flex-end}
+.compact-rating-source{align-self:flex-end;color:var(--muted);font-size:.75rem}
 .compact-rating:hover .compact-rating-top>span:last-child{text-decoration:underline}
 .review-heading>.compact-rating{margin-bottom:1.5rem}
