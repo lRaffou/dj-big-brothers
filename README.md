@@ -77,7 +77,7 @@ Pour changer l’adresse de réception des demandes, modifier les liens de conta
 
 ## Fonctionnement du contact
 
-Les pages juridiques au nom de YO Production sont préparées dans [`drafts/legal/`](drafts/legal/README.md). Elles restent hors du site publié jusqu’à confirmation de l’identité juridique, des conditions contractuelles et des pratiques de traitement des données. Le fichier de suivi précise les informations manquantes et l’intégration des liens dans le footer et sous le formulaire.
+Les pages juridiques de Big Brothers sont préparées dans [`drafts/legal/`](drafts/legal/README.md). Elles restent hors du site publié jusqu’à confirmation de l’éditeur du site, du cadre contractuel avec REGARTS (organisme de facturation) et des pratiques de traitement des données. Le fichier de suivi précise les informations manquantes et l’intégration des liens dans le footer et sous le formulaire.
 
 Le formulaire crée un lien `mailto:` à partir du prénom, de la date, du lieu et du message saisis. Il ouvre un brouillon dans la messagerie du visiteur, qui doit ensuite l’envoyer lui-même.
 
