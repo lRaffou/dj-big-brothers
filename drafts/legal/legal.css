@@ -11,3 +11,7 @@
 .legal-links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;width:100%;font-size:.875rem;color:var(--muted)}
 .legal-links a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline;text-underline-offset:.2em}
 .legal-links a:hover,.legal-links a[aria-current="page"]{color:var(--text)}
+
+
+.legal-form-notice a{text-decoration:underline;text-underline-offset:.2em}
+.legal-preview-note{padding-block:.75rem;border-block:1px solid var(--line);font-size:.875rem;color:var(--muted)}
