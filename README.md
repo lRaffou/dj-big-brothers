@@ -22,6 +22,10 @@ HTML, CSS et JavaScript natif, sans framework, installation de dépendances ni �
 
 Les photos sont au format WebP. Les polices **Barlow Condensed** et **DM Sans** sont servies localement en WOFF2 : leur affichage ne dépend pas de Google Fonts. Leurs licences sont conservées dans `dist/assets/fonts/`.
 
+### Typographie validée
+
+Conserver **Barlow Condensed** pour les titres et **DM Sans** pour les textes et les boutons, sur mobile comme sur ordinateur. Ce choix a été validé par le propriétaire : ne pas remplacer ces polices ni leurs fichiers locaux lors des prochaines modifications, sauf demande explicite de sa part. Préserver également les graisses et la casse actuelles.
+
 ## Lancer le site en local
 
 Pour un aperçu rapide, ouvrir `dist/index.html` dans un navigateur.
