@@ -17,3 +17,10 @@
 
 footer .legal-links{padding-top:.75rem;padding-right:3rem;border-top:1px solid var(--line)}
 footer>a:not(.brand){font-size:.875rem;color:var(--muted);display:inline-flex;align-items:center;min-height:2.75rem}
+
+/* Award documents are separate from the legal links. */
+.award-links{display:flex;align-items:center;flex-wrap:wrap;gap:.25rem 1.25rem;width:100%;padding-top:.75rem;padding-right:3rem;border-top:1px solid var(--line);font-size:.8125rem;color:var(--muted)}
+.award-links>span{width:100%;font-weight:600;color:var(--text)}
+.award-links a{display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem;max-width:100%}
+.award-links a:hover{color:var(--text);text-decoration:underline}
+@media(min-width:48rem){.award-links>span{width:auto}}

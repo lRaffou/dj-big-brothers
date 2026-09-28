@@ -21,7 +21,7 @@ Les coordonnées de GitHub Pages ont été complétées, téléphone +1 877 448 
 
 ## Vérification technique effectuée
 
-Le badge Wedding Awards 2024 ajoute désormais une image externe chargée depuis cdn1.mariages.net à proximité de la section Avis. Son chargement transmet les informations de connexion au tiers, sans référent. Aucun script Mariages.net ni iframe n’est intégré ; le code propre au site ne dépose pas de cookie et ne recourt pas au stockage local ou de session. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
+Le badge Wedding Awards 2024 et les deux PDF fournis sont désormais hébergés localement avec le site ; aucune ressource Mariages.net externe n’est chargée. Aucun script Mariages.net ni iframe n’est intégré ; le code propre au site ne dépose pas de cookie et ne recourt pas au stockage local ou de session. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
 
 ## Intégration après résolution
 
