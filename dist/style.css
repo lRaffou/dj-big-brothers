@@ -13,8 +13,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .brand>span:first-child{font-size:.875rem;vertical-align:top;letter-spacing:0}
 .header nav{display:flex;flex-wrap:nowrap;gap:1.5rem;order:3;width:100%;min-width:0;border-top:1px solid var(--line);padding:.5rem .25rem .25rem;font-size:.875rem;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding-inline:.25rem;scrollbar-width:none}
 .header nav::-webkit-scrollbar{display:none}
-.nav-scroll-hint{order:4;width:100%;margin:-.75rem 0 0;color:var(--muted);font-size:.6875rem;line-height:1.5}
-.nav-scroll-hint span{margin-left:.25rem}
+.nav-scroll-hint{order:4;display:flex;justify-content:center;width:100%;margin:-.75rem 0 0;color:var(--muted);opacity:.65;line-height:1}
+.nav-scroll-hint svg{display:block}
 .nav-scroll-hint[hidden]{display:none}
 .header nav a{display:flex;align-items:center;flex:0 0 auto;white-space:nowrap;min-height:2.75rem;padding:.5rem .125rem;scroll-snap-align:start}
 .header nav a:focus-visible{outline-offset:-2px}
@@ -191,8 +191,8 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 
 /* A fading edge indicates more navigation links; keyboard focus stays clear. */
 @media(max-width:63.999rem){
-.header nav{--nav-fade-start:#000;--nav-fade-end:#000;mask-image:linear-gradient(to right,var(--nav-fade-start),#000 1rem,#000 calc(100% - 1rem),var(--nav-fade-end))}
+.header nav{--nav-fade-start:#000;--nav-fade-end:#000;--nav-edge-mask:linear-gradient(to right,var(--nav-fade-start),#000 2.5rem,#000 calc(100% - 2.5rem),var(--nav-fade-end));-webkit-mask-image:var(--nav-edge-mask);mask-image:var(--nav-edge-mask)}
 .header nav.can-scroll-back{--nav-fade-start:transparent}
 .header nav.can-scroll-forward{--nav-fade-end:transparent}
-.header nav:focus-within{mask-image:none}
+.header nav:has(a:focus-visible){-webkit-mask-image:none;mask-image:none}
 }
