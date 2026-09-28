@@ -50,7 +50,51 @@ if (mobileNavigation && navigationHint) {
   };
   mobileNavigation.addEventListener('scroll', updateNavigationOverflow, { passive: true });
   mobileNavigationQuery.addEventListener('change', updateNavigationOverflow);
-  new ResizeObserver(updateNavigationOverflow).observe(mobileNavigation);
+  const navigationSizeObserver = new ResizeObserver(updateNavigationOverflow);
+  navigationSizeObserver.observe(mobileNavigation);
+  mobileNavigation.querySelectorAll('a').forEach(link => navigationSizeObserver.observe(link));
   document.fonts.ready.then(updateNavigationOverflow);
   updateNavigationOverflow();
+}
+
+// Reflect the section currently in view without moving the document vertically.
+if (mobileNavigation) {
+  const sectionLinks = [...mobileNavigation.querySelectorAll('a[href^="#"]')].map(link => ({
+    link,
+    section: document.querySelector(link.getAttribute('href'))
+  })).filter(entry => entry.section);
+  let activeLink = null;
+  let navigationFrame = 0;
+  const updateCurrentSection = () => {
+    navigationFrame = 0;
+    const marker = Math.min(window.innerHeight * 0.28, 180);
+    const current = sectionLinks.find(({ section }) => {
+      const bounds = section.getBoundingClientRect();
+      return bounds.top <= marker && bounds.bottom > marker;
+    })?.link || null;
+    if (current === activeLink) return;
+    sectionLinks.forEach(({ link }) => {
+      if (link === current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    activeLink = current;
+    if (current && window.matchMedia('(max-width: 63.999rem)').matches) {
+      const bounds = mobileNavigation.getBoundingClientRect();
+      const linkBounds = current.getBoundingClientRect();
+      if (linkBounds.left < bounds.left + 40 || linkBounds.right > bounds.right - 40) {
+        const left = mobileNavigation.scrollLeft + linkBounds.left - bounds.left - (bounds.width - linkBounds.width) / 2;
+        mobileNavigation.scrollTo({ left, behavior: 'instant' });
+      }
+    }
+  };
+  const scheduleCurrentSection = () => {
+    if (!navigationFrame) navigationFrame = requestAnimationFrame(updateCurrentSection);
+  };
+  window.addEventListener('scroll', scheduleCurrentSection, { passive: true });
+  window.addEventListener('resize', scheduleCurrentSection);
+  window.addEventListener('hashchange', scheduleCurrentSection);
+  window.addEventListener('pageshow', scheduleCurrentSection);
+  window.addEventListener('load', scheduleCurrentSection);
+  document.fonts.ready.then(scheduleCurrentSection);
+  scheduleCurrentSection();
 }

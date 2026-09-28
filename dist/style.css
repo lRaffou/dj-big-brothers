@@ -13,11 +13,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .brand>span:first-child{font-size:.875rem;vertical-align:top;letter-spacing:0}
 .header nav{display:flex;flex-wrap:nowrap;gap:1.5rem;order:3;width:100%;min-width:0;border-top:1px solid var(--line);padding:.5rem .25rem .25rem;font-size:.875rem;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding-inline:.25rem;scrollbar-width:none}
 .header nav::-webkit-scrollbar{display:none}
-.nav-scroll-hint{order:4;display:flex;justify-content:center;width:100%;margin:-.75rem 0 0;color:var(--muted);opacity:.65;line-height:1}
+.nav-scroll-hint{order:4;display:flex;justify-content:flex-end;width:100%;margin:-1rem 0 0;color:var(--muted);opacity:.65;line-height:1}
 .nav-scroll-hint svg{display:block}
 .nav-scroll-hint[hidden]{display:none}
 .header nav a{display:flex;align-items:center;flex:0 0 auto;white-space:nowrap;min-height:2.75rem;padding:.5rem .125rem;scroll-snap-align:start}
 .header nav a:focus-visible{outline-offset:-2px}
+.header nav a[aria-current="location"]{color:var(--accent)}
 .header nav a:hover,.text-link:hover{color:var(--accent)}
 .button{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;max-width:100%;padding:1rem 1.25rem;border:1px solid var(--accent);background:var(--accent);color:#151515;font:600 1rem/1.4 'DM Sans',Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
 .button span{flex-shrink:0;font-size:1.5rem;line-height:1}
@@ -191,6 +192,7 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 
 /* A fading edge indicates more navigation links; keyboard focus stays clear. */
 @media(max-width:63.999rem){
+.header nav a[aria-current="location"]{font-size:1rem}
 .header nav{--nav-fade-start:#000;--nav-fade-end:#000;--nav-edge-mask:linear-gradient(to right,var(--nav-fade-start),#000 2.5rem,#000 calc(100% - 2.5rem),var(--nav-fade-end));-webkit-mask-image:var(--nav-edge-mask);mask-image:var(--nav-edge-mask)}
 .header nav.can-scroll-back{--nav-fade-start:transparent}
 .header nav.can-scroll-forward{--nav-fade-end:transparent}
