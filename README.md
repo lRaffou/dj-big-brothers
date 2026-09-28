@@ -15,7 +15,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 - Questions fréquentes et détails dépliables.
 - Formulaire préparant une demande de devis par e-mail.
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
-- Mise en page mobile first, avec adaptation progressive aux tablettes et ordinateurs.
+- Mise en page mobile first, avec adaptation progressive aux tablettes et ordinateurs. Navigation horizontale au toucher sur petit écran, avec une indication de glissement et des bords estompés lorsque des liens restent hors champ ; navigation complète sur ordinateur et liens accessibles au clavier.
 
 ## Technologies
 

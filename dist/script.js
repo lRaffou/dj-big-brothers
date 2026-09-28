@@ -35,3 +35,22 @@ if (awardImage) {
   awardImage.addEventListener('error', hideUnavailableAwardImage);
   if (awardImage.complete && awardImage.naturalWidth === 0) hideUnavailableAwardImage();
 }
+
+// Native horizontal navigation keeps touch scrolling and keyboard links intact.
+const mobileNavigation = document.querySelector('.header nav');
+const navigationHint = document.querySelector('.nav-scroll-hint');
+if (mobileNavigation && navigationHint) {
+  const mobileNavigationQuery = window.matchMedia('(max-width: 63.999rem)');
+  const updateNavigationOverflow = () => {
+    const remaining = mobileNavigation.scrollWidth - mobileNavigation.clientWidth;
+    const overflows = mobileNavigationQuery.matches && remaining > 2;
+    navigationHint.hidden = !overflows;
+    mobileNavigation.classList.toggle('can-scroll-back', overflows && mobileNavigation.scrollLeft > 2);
+    mobileNavigation.classList.toggle('can-scroll-forward', overflows && mobileNavigation.scrollLeft < remaining - 2);
+  };
+  mobileNavigation.addEventListener('scroll', updateNavigationOverflow, { passive: true });
+  mobileNavigationQuery.addEventListener('change', updateNavigationOverflow);
+  new ResizeObserver(updateNavigationOverflow).observe(mobileNavigation);
+  document.fonts.ready.then(updateNavigationOverflow);
+  updateNavigationOverflow();
+}

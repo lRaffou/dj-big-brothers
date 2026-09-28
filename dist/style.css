@@ -11,8 +11,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.25rem 1rem}
 .brand{font:800 1.625rem/.95 'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:-.04rem;min-height:2.75rem;display:inline-block}
 .brand>span:first-child{font-size:.875rem;vertical-align:top;letter-spacing:0}
-.header nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.25rem .75rem;order:3;width:100%;border-top:1px solid var(--line);padding-top:.5rem;font-size:.875rem}
-.header nav a{display:flex;align-items:center;min-height:2.75rem;padding-block:.5rem}
+.header nav{display:flex;flex-wrap:nowrap;gap:1.5rem;order:3;width:100%;min-width:0;border-top:1px solid var(--line);padding:.5rem .25rem .25rem;font-size:.875rem;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding-inline:.25rem;scrollbar-width:none}
+.header nav::-webkit-scrollbar{display:none}
+.nav-scroll-hint{order:4;width:100%;margin:-.75rem 0 0;color:var(--muted);font-size:.6875rem;line-height:1.5}
+.nav-scroll-hint span{margin-left:.25rem}
+.nav-scroll-hint[hidden]{display:none}
+.header nav a{display:flex;align-items:center;flex:0 0 auto;white-space:nowrap;min-height:2.75rem;padding:.5rem .125rem;scroll-snap-align:start}
+.header nav a:focus-visible{outline-offset:-2px}
 .header nav a:hover,.text-link:hover{color:var(--accent)}
 .button{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;max-width:100%;padding:1rem 1.25rem;border:1px solid var(--accent);background:var(--accent);color:#151515;font:600 1rem/1.4 'DM Sans',Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
 .button span{flex-shrink:0;font-size:1.5rem;line-height:1}
@@ -110,7 +115,6 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .wedding-faq{margin-top:3rem}
 .wedding-faq h3{margin-bottom:1.5rem}
 @media(min-width:30rem){
-.header nav{grid-template-columns:repeat(4,minmax(0,1fr))}
 .hero-photo{aspect-ratio:5/4}
 .price-options dl>div{flex-direction:row;justify-content:space-between;gap:1.5rem}
 .price-options dd{white-space:nowrap;align-self:flex-start}
@@ -128,7 +132,7 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .ribbon span{font-size:2.375rem}.ribbon{gap:3.5rem;padding:1rem 0}footer p{width:auto}
 }
 @media(min-width:64rem){
-.header{flex-wrap:nowrap}.header nav{display:flex;order:0;flex-wrap:wrap;width:auto;gap:1.5rem;border:0;padding:0}
+.header{flex-wrap:nowrap}.header nav{display:flex;order:0;flex-wrap:wrap;width:auto;gap:1.5rem;border:0;padding:0;overflow:visible;scroll-snap-type:none}.header nav a{padding-inline:0}.nav-scroll-hint{display:none}
 .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0 2.5rem;padding-top:2.25rem}.hero-copy{padding-block:2.125rem 1.25rem}.hero h1{font-size:clamp(3rem,6vw,5.25rem)}
 .intro{font-size:1.125rem}.hero-photo{aspect-ratio:auto;min-height:37rem}.hero-photo>img{object-position:center 53%}.hero-bottom{padding:1.875rem 0 2.5rem}
 .section{padding-block:5.9375rem}.section-heading{column-gap:5rem}.about{padding-top:1rem;gap:5.625rem}.portrait{min-height:28rem}.portrait-word{font-size:8.4rem}
@@ -184,3 +188,11 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .review-award-copy strong{font-weight:600;color:var(--text)}
 .review-award-source{display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem}
 .review-award:hover .review-award-source{color:var(--accent)}
+
+/* A fading edge indicates more navigation links; keyboard focus stays clear. */
+@media(max-width:63.999rem){
+.header nav{--nav-fade-start:#000;--nav-fade-end:#000;mask-image:linear-gradient(to right,var(--nav-fade-start),#000 1rem,#000 calc(100% - 1rem),var(--nav-fade-end))}
+.header nav.can-scroll-back{--nav-fade-start:transparent}
+.header nav.can-scroll-forward{--nav-fade-end:transparent}
+.header nav:focus-within{mask-image:none}
+}
