@@ -10,8 +10,8 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 
 - Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
 - Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
-- Avis clients, lien vers la fiche Mariages.net et badge Wedding Awards 2024. Le badge est extrait du diplôme fourni par le propriétaire et hébergé localement, sans script ni image externe Mariages.net. Si l’image est indisponible, la mention de la récompense et le lien restent visibles. Le nombre de 30 avis reste renseigné manuellement.
-- Diplôme et communiqué Wedding Awards 2024 accessibles en PDF depuis le pied de page. Les documents originaux sont conservés ; le communiqué mentionne 31 avis, sans modifier les 30 avis confirmés pour le site.
+- Avis clients, lien vers la fiche Mariages.net et badge Wedding Awards 2024. Le badge est extrait du diplôme fourni par le propriétaire et hébergé localement, sans script ni image externe Mariages.net. Si l’image est indisponible, la mention de la récompense et le lien restent visibles. Le nombre de 31 avis reste renseigné manuellement.
+- Diplôme et communiqué Wedding Awards 2024 accessibles en PDF depuis le pied de page. Les documents originaux sont conservés ; le communiqué et le site mentionnent 31 avis, conformément à la dernière confirmation du propriétaire.
 - Questions fréquentes et détails dépliables.
 - Formulaire préparant une demande de devis par e-mail.
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
