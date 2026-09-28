@@ -10,7 +10,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 
 - Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
 - Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
-- Extraits d’avis et résumé compact cliquable : cinq étoiles dorées, 30 avis, note 5.0 sur 5. Valeurs renseignées manuellement à partir de la capture fournie ; aucune synchronisation automatique ni aucun script Mariages.net intégré.
+- Avis clients et lien vers la fiche Mariages.net.
 - Questions fréquentes et détails dépliables.
 - Formulaire préparant une demande de devis par e-mail.
 - Bannière défilante avec pause/reprise et bouton de retour en haut.

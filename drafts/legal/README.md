@@ -21,7 +21,7 @@ Les coordonnées de GitHub Pages ont été complétées, téléphone +1 877 448 
 
 ## Vérification technique effectuée
 
-Le module externe a été retiré au profit d’un résumé statique cliquable. Seules les ressources du site sont chargées ; aucun cookie ni stockage local ou de session n’est ajouté par son code. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
+Sur le site public : seules des requêtes vers lraffou.github.io ont été observées, aucun cookie ni stockage local ou de session, aucun iframe/vidéo intégrée et un seul script local. Le formulaire prépare un lien mailto vers Gmail ; les champs ne sont pas envoyés à un serveur du site. Les services de messagerie, de gestion et d’archivage utilisés après la réception restent à préciser par le client.
 
 ## Intégration après résolution
 
