@@ -175,3 +175,12 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .agency-team ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;list-style:none;padding:0;margin:1.5rem 0}
 .agency-team li{border:1px solid var(--line);padding:1rem;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
 @media(min-width:48rem){.agency-services ul{grid-template-columns:repeat(2,minmax(0,1fr))}.agency-team ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Wedding Awards badge: original image and a readable link if unavailable. */
+.review-award{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;width:fit-content;max-width:100%;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.review-award-image{display:block;width:125px;height:125px;object-fit:contain;flex-shrink:0}
+.review-award-image[hidden]{display:none}
+.review-award-copy{display:flex;flex-direction:column;gap:.35rem;font-size:.875rem;color:var(--muted)}
+.review-award-copy strong{font-weight:600;color:var(--text)}
+.review-award-source{display:inline-flex;align-items:center;gap:.35rem;min-height:2.75rem}
+.review-award:hover .review-award-source{color:var(--accent)}

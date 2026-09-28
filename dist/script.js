@@ -27,3 +27,11 @@ backToTop.addEventListener('click', () => {
   document.querySelector('#haut').focus({ preventScroll: true });
   window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 });
+
+// Keep the award label and destination available if the external image fails.
+const awardImage = document.querySelector('.review-award-image');
+if (awardImage) {
+  const hideUnavailableAwardImage = () => { awardImage.hidden = true; };
+  awardImage.addEventListener('error', hideUnavailableAwardImage);
+  if (awardImage.complete && awardImage.naturalWidth === 0) hideUnavailableAwardImage();
+}

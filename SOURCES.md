@@ -9,3 +9,7 @@ Tarifs ajoutés depuis https://www.yoproduction.fr/tarifs-dj-mariage-toulouse/ :
 ## Présentation de l’agence
 
 Texte fourni directement par le propriétaire : Big Brothers devient une agence de DJs et de solutions musicales pour les mariages, soirées privées, événements professionnels et célébrations. Équipe : Sophie, Yoan, Thao et Yo. Les mentions « lauréate des Wedding Awards » et « DJ officiel de l’Abbaye Guinguette de Lafrançaise » proviennent de ce texte, sans ajout d’année, de catégorie de récompense ou de biographie. Les tarifs existants restent identifiés comme des formules mariage.
+
+## Wedding Awards 2024
+
+Code du badge fourni par le propriétaire : image https://cdn1.mariages.net/img/badges/2024/badge-weddingawards_fr_FR.jpg et fiche Big Brothers e265589. L’année 2024 est affichée explicitement. Seule l’image liée est intégrée ; le script wpShowRatedWAv3 n’est pas chargé. Le serveur de l’image a renvoyé HTTP 403 lors de la vérification du 28 septembre 2026 ; un libellé et un lien restent affichés en cas d’échec.
