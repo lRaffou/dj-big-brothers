@@ -38,16 +38,34 @@ if (awardImage) {
 
 // Native horizontal navigation keeps touch scrolling and keyboard links intact.
 const mobileNavigation = document.querySelector('.header nav');
-const navigationHint = document.querySelector('.nav-scroll-hint');
-if (mobileNavigation && navigationHint) {
+const previousNavigation = document.querySelector('.nav-arrow-previous');
+const nextNavigation = document.querySelector('.nav-arrow-next');
+if (mobileNavigation && previousNavigation && nextNavigation) {
   const mobileNavigationQuery = window.matchMedia('(max-width: 63.999rem)');
   const updateNavigationOverflow = () => {
     const remaining = mobileNavigation.scrollWidth - mobileNavigation.clientWidth;
     const overflows = mobileNavigationQuery.matches && remaining > 2;
-    navigationHint.hidden = !overflows;
+    previousNavigation.hidden = nextNavigation.hidden = !overflows;
+    previousNavigation.disabled = !overflows || mobileNavigation.scrollLeft <= 2;
+    nextNavigation.disabled = !overflows || mobileNavigation.scrollLeft >= remaining - 2;
     mobileNavigation.classList.toggle('can-scroll-back', overflows && mobileNavigation.scrollLeft > 2);
     mobileNavigation.classList.toggle('can-scroll-forward', overflows && mobileNavigation.scrollLeft < remaining - 2);
   };
+  const moveNavigation = (direction) => mobileNavigation.scrollBy({
+    left: direction * Math.max(120, mobileNavigation.clientWidth - 104),
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+  });
+  previousNavigation.addEventListener('click', () => moveNavigation(-1));
+  nextNavigation.addEventListener('click', () => moveNavigation(1));
+  mobileNavigation.addEventListener('focusin', (event) => {
+    const link = event.target.closest('a');
+    if (!link || !link.matches(':focus-visible') || !mobileNavigationQuery.matches) return;
+    const bounds = mobileNavigation.getBoundingClientRect();
+    const item = link.getBoundingClientRect();
+    if (item.left < bounds.left + 52 || item.right > bounds.right - 52) {
+      mobileNavigation.scrollTo({ left: mobileNavigation.scrollLeft + item.left - bounds.left - (bounds.width - item.width) / 2, behavior: 'instant' });
+    }
+  });
   mobileNavigation.addEventListener('scroll', updateNavigationOverflow, { passive: true });
   mobileNavigationQuery.addEventListener('change', updateNavigationOverflow);
   const navigationSizeObserver = new ResizeObserver(updateNavigationOverflow);
@@ -81,7 +99,7 @@ if (mobileNavigation) {
     if (current && window.matchMedia('(max-width: 63.999rem)').matches) {
       const bounds = mobileNavigation.getBoundingClientRect();
       const linkBounds = current.getBoundingClientRect();
-      if (linkBounds.left < bounds.left + 40 || linkBounds.right > bounds.right - 40) {
+      if (linkBounds.left < bounds.left + 52 || linkBounds.right > bounds.right - 52) {
         const left = mobileNavigation.scrollLeft + linkBounds.left - bounds.left - (bounds.width - linkBounds.width) / 2;
         mobileNavigation.scrollTo({ left, behavior: 'instant' });
       }
