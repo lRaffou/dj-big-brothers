@@ -73,8 +73,13 @@ const nextNavigation = document.querySelector('.nav-arrow-next');
 if (mobileNavigation && previousNavigation && nextNavigation) {
   const mobileNavigationQuery = window.matchMedia('(max-width: 63.999rem)');
   const updateNavigationOverflow = () => {
+    const links = [...mobileNavigation.querySelectorAll('a')];
+    const gap = parseFloat(getComputedStyle(mobileNavigation).columnGap) || 0;
+    const contentWidth = links.reduce((width, link) => width + link.getBoundingClientRect().width, 0) + gap * Math.max(0, links.length - 1);
+    // Decide from the links themselves, independently of the space reserved for arrows.
+    const overflows = mobileNavigationQuery.matches && contentWidth > mobileNavigation.clientWidth - 8;
+    mobileNavigation.classList.toggle('is-scrollable', overflows);
     const remaining = mobileNavigation.scrollWidth - mobileNavigation.clientWidth;
-    const overflows = mobileNavigationQuery.matches && remaining > 2;
     previousNavigation.hidden = nextNavigation.hidden = !overflows;
     previousNavigation.disabled = !overflows || mobileNavigation.scrollLeft <= 2;
     nextNavigation.disabled = !overflows || mobileNavigation.scrollLeft >= remaining - 2;
@@ -98,7 +103,14 @@ if (mobileNavigation && previousNavigation && nextNavigation) {
   });
   mobileNavigation.addEventListener('scroll', updateNavigationOverflow, { passive: true });
   mobileNavigationQuery.addEventListener('change', updateNavigationOverflow);
-  const navigationSizeObserver = new ResizeObserver(updateNavigationOverflow);
+  let navigationSizeFrame = 0;
+  const navigationSizeObserver = new ResizeObserver(() => {
+    if (navigationSizeFrame) return;
+    navigationSizeFrame = requestAnimationFrame(() => {
+      navigationSizeFrame = 0;
+      updateNavigationOverflow();
+    });
+  });
   navigationSizeObserver.observe(mobileNavigation);
   mobileNavigation.querySelectorAll('a').forEach(link => navigationSizeObserver.observe(link));
   document.fonts.ready.then(updateNavigationOverflow);
