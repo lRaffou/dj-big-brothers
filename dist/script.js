@@ -37,6 +37,35 @@ if (awardImage) {
   if (awardImage.complete && awardImage.naturalWidth === 0) hideUnavailableAwardImage();
 }
 
+// Preserve the header layout while the compact navigation pins to the viewport.
+const navigationBar = document.querySelector('.header-navigation');
+const navigationSlot = document.querySelector('.navigation-slot');
+if (navigationBar && navigationSlot) {
+  let stickyFrame = 0;
+  const updateStickyNavigation = () => {
+    stickyFrame = 0;
+    const pinned = navigationSlot.getBoundingClientRect().top <= 0;
+    navigationBar.classList.toggle('is-fixed', pinned);
+  };
+  const scheduleStickyNavigation = () => {
+    if (!stickyFrame) stickyFrame = requestAnimationFrame(updateStickyNavigation);
+  };
+  const measureStickyNavigation = () => {
+    navigationBar.classList.remove('is-fixed');
+    navigationSlot.style.height = '';
+    navigationSlot.style.height = navigationBar.getBoundingClientRect().height + 'px';
+    navigationBar.classList.add('is-fixed');
+    document.documentElement.style.setProperty('--navigation-offset', Math.ceil(navigationBar.getBoundingClientRect().height + 16) + 'px');
+    updateStickyNavigation();
+  };
+  window.addEventListener('scroll', scheduleStickyNavigation, { passive: true });
+  window.addEventListener('resize', measureStickyNavigation);
+  window.addEventListener('pageshow', measureStickyNavigation);
+  window.addEventListener('load', measureStickyNavigation);
+  document.fonts.ready.then(measureStickyNavigation);
+  measureStickyNavigation();
+}
+
 // Native horizontal navigation keeps touch scrolling and keyboard links intact.
 const mobileNavigation = document.querySelector('.header nav');
 const previousNavigation = document.querySelector('.nav-arrow-previous');
@@ -86,7 +115,8 @@ if (mobileNavigation) {
   let navigationFrame = 0;
   const updateCurrentSection = () => {
     navigationFrame = 0;
-    const marker = Math.min(window.innerHeight * 0.28, 180);
+    const pinnedHeight = navigationBar?.classList.contains('is-fixed') ? navigationBar.getBoundingClientRect().height : 0;
+    const marker = Math.max(pinnedHeight + 24, Math.min(window.innerHeight * 0.28, 180));
     const current = sectionLinks.find(({ section }) => {
       const bounds = section.getBoundingClientRect();
       return bounds.top <= marker && bounds.bottom > marker;

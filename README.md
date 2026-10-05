@@ -17,6 +17,8 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
 - Mise en page mobile first, avec adaptation progressive aux tablettes et ordinateurs. Navigation horizontale au toucher sur petit écran, avec une flèche cliquable à chaque extrémité, centrée sur les textes, un lien actif légèrement agrandi sur mobile qui suit la section visible, et un fondu du texte sous les flèches ; navigation complète sur ordinateur et liens accessibles au clavier.
 
+- Navigation compacte fixe après défilement, avec la marque Big Brothers et un décalage des ancres adapté à sa hauteur ; le logo principal et le bouton de contact défilent normalement.
+
 ## Technologies
 
 HTML, CSS et JavaScript natif, sans framework, installation de dépendances ni étape de compilation. Le dossier `dist/` contient directement les fichiers à modifier et à héberger.
