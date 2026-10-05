@@ -141,10 +141,11 @@ if (mobileNavigation) {
       if (current !== activeLink) return;
       const bounds = mobileNavigation.getBoundingClientRect();
       const linkBounds = current.getBoundingClientRect();
-      if (linkBounds.left < bounds.left + 52 || linkBounds.right > bounds.right - 52) {
-        const left = mobileNavigation.scrollLeft + linkBounds.left - bounds.left - (bounds.width - linkBounds.width) / 2;
-        mobileNavigation.scrollTo({ left, behavior });
-      }
+      // Follow every section change, even when the next short label is already visible.
+      const centered = mobileNavigation.scrollLeft + linkBounds.left - bounds.left - (bounds.width - linkBounds.width) / 2;
+      const maximum = Math.max(0, mobileNavigation.scrollWidth - mobileNavigation.clientWidth);
+      const left = Math.max(0, Math.min(centered, maximum));
+      if (Math.abs(mobileNavigation.scrollLeft - left) > 1) mobileNavigation.scrollTo({ left, behavior });
     });
   };
   const scheduleCurrentSection = () => {
