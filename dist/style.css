@@ -233,3 +233,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 .header-navigation.is-fixed nav{justify-content:flex-end}
 }
 @media(min-width:93.75rem){.header-navigation.is-fixed{padding-inline:max(3.75rem,calc((100vw - 77.5rem)/2))}}
+
+/* Indicate invalid fields without changing the typography. */
+#enquiry [aria-invalid="true"]{border-color:#ffb6ad}
+#enquiry button:disabled{opacity:.6;cursor:not-allowed}

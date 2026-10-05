@@ -1,13 +1,35 @@
 const form = document.querySelector('#enquiry');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (!form.reportValidity()) return;
-  const data = new FormData(form);
-  const date = new Date(`${data.get('date')}T12:00:00`).toLocaleDateString('fr-FR');
-  const body = `Bonjour l’équipe Big Brothers,\n\nJe m'appelle ${data.get('prenom')}. Nous préparons un événement le ${date}, à ${data.get('lieu')}.\n\n${data.get('message') || ''}\n\nVotre équipe est-elle disponible à cette date ? Pourrions-nous échanger sur votre prestation et un devis ?\n\nMerci !`;
-  window.location.href = `mailto:djbigbrothers.music@gmail.com?subject=${encodeURIComponent(`Événement du ${date} — demande de devis`)}&body=${encodeURIComponent(body)}`;
-  document.querySelector('#form-status').textContent = 'Votre brouillon est prêt dans votre messagerie. Si elle ne s’ouvre pas, écrivez à djbigbrothers.music@gmail.com ou appelez le 06 98 96 46 79.';
-});
+if (form && typeof enquiryValidation !== 'undefined') {
+  const fields = ['prenom', 'date', 'lieu', 'message'];
+  const status = document.querySelector('#form-status');
+  form.noValidate = true;
+  form.elements.date.min = enquiryValidation.localDate();
+  fields.forEach(name => form.elements[name].addEventListener('input', () => {
+    form.elements[name].setCustomValidity('');
+    form.elements[name].removeAttribute('aria-invalid');
+    status.textContent = '';
+  }));
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    form.elements.date.min = enquiryValidation.localDate();
+    const result = enquiryValidation.prepare(Object.fromEntries(new FormData(form)));
+    fields.forEach(name => {
+      const field = form.elements[name];
+      field.setCustomValidity(result.errors[name] || '');
+      if (result.errors[name]) field.setAttribute('aria-invalid', 'true');
+      else field.removeAttribute('aria-invalid');
+    });
+    if (Object.keys(result.errors).length) {
+      status.textContent = 'Vérifiez les champs indiqués avant de préparer votre e-mail.';
+      form.reportValidity();
+      return;
+    }
+    fields.forEach(name => { form.elements[name].value = result.values[name]; });
+    status.textContent = 'Votre brouillon est prêt dans votre messagerie. Si elle ne s’ouvre pas, écrivez à djbigbrothers.music@gmail.com ou appelez le 06 98 96 46 79.';
+    window.location.href = result.href;
+  });
+  form.querySelector('button[type="submit"]').disabled = false;
+}
 
 const ribbon = document.querySelector('.ribbon');
 const ribbonToggle = document.querySelector('.ribbon-toggle');

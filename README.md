@@ -55,6 +55,7 @@ Ouvrir ensuite [http://localhost:8080](http://localhost:8080). Sur Windows, util
     ├── index.html        # Structure, textes, tarifs et coordonnées
     ├── style.css         # Apparence, responsive et animations
     ├── script.js         # Formulaire, bannière et retour en haut
+    ├── contact-validation.js # Validation et préparation du brouillon
     ├── fonts.css         # Déclarations des polices locales
     ├── robots.txt
     └── assets/
@@ -77,7 +78,7 @@ Le dossier `.sites-runtime/` et les archives `*.tar.gz` sont des fichiers de tra
 
 Les variables CSS de `:root` définissent la palette. Les styles de base ciblent le mobile ; les règles `min-width` ajoutent les dispositions pour les écrans plus larges.
 
-Pour changer l’adresse de réception des demandes, modifier les liens de contact dans `dist/index.html` **et** l’adresse utilisée dans `dist/script.js`.
+Pour changer l’adresse de réception des demandes, modifier les liens de contact dans `dist/index.html` **et** l’adresse utilisée dans `dist/contact-validation.js` (ainsi que le texte de secours dans `dist/script.js`).
 
 ## Fonctionnement du contact
 
@@ -86,6 +87,10 @@ Les trois pages juridiques sont accessibles depuis le footer dans `dist/`, sous 
 Le formulaire crée un lien `mailto:` à partir du prénom, de la date, du lieu et du message saisis. Il ouvre un brouillon dans la messagerie du visiteur, qui doit ensuite l’envoyer lui-même.
 
 Aucun serveur n’envoie les messages et aucune base de données ne stocke les demandes. Une messagerie configurée est nécessaire ; l’adresse e-mail et le numéro de téléphone restent accessibles directement sur la page.
+
+Les contrôles locaux limitent le prénom à 80 caractères, le lieu à 160 et le message à 1 000. Les prénoms acceptent les lettres Unicode et les ponctuations usuelles ; les dates doivent exister et ne pas être passées. Les caractères de contrôle sont refusés, hormis les retours à la ligne et tabulations dans le message. Le destinataire est fixe et les paramètres du lien e-mail sont encodés séparément. Le formulaire est désactivé sans JavaScript et la politique CSP bloque toute soumission HTML classique (aucune donnée dans l’URL du site), les éléments object et les changements de base URL.
+
+Ces validations côté navigateur peuvent être contournées : elles ne remplacent pas des contrôles côté serveur si un service d’envoi est ajouté. Elles n’offrent pas de protection antispam de la boîte e-mail publique. Tests de régression : `node --test tests/contact-validation.test.cjs`. Référence : [OWASP Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
 
 ## Accessibilité et vérifications
 
