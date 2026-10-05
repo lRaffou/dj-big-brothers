@@ -15,7 +15,8 @@ ribbonToggle.addEventListener('click', () => {
   const paused = ribbon.classList.toggle('is-paused');
   ribbonToggle.setAttribute('aria-pressed', String(paused));
   ribbonToggle.setAttribute('aria-label', paused ? 'Reprendre le défilement' : 'Mettre le défilement en pause');
-  ribbonToggle.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
+  ribbonToggle.querySelector('.icon-pause').toggleAttribute('hidden', paused);
+  ribbonToggle.querySelector('.icon-play').toggleAttribute('hidden', !paused);
 });
 
 const backToTop = document.querySelector('.back-to-top');

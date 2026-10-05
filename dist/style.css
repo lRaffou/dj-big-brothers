@@ -74,7 +74,7 @@ blockquote{font-size:1.3125rem;line-height:1.55;margin:1.5rem 0;max-width:31rem}
 .phone{display:block;width:fit-content;min-height:2.75rem;font:600 2.125rem/1.4 'Barlow Condensed',sans-serif;margin:1.5rem 0 .4rem}
 .email{display:inline-flex;align-items:center;min-height:2.75rem;font-size:.875rem;overflow-wrap:anywhere}
 form{padding-top:.5rem;min-width:0}
-label{display:block;font-size:.875rem;margin-bottom:1.25rem}
+label{display:block;min-width:0;max-width:100%;font-size:.875rem;margin-bottom:1.25rem}
 input,textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:3rem;margin-top:.6rem;background:#202020;border:1px solid #44443c;border-radius:0;padding:.875rem;color:var(--text);font:1rem/1.4 'DM Sans',sans-serif}
 textarea{resize:vertical}
 form .button{width:100%;text-align:left}
@@ -201,3 +201,18 @@ footer>a:last-child{font-size:.875rem;color:var(--muted);display:inline-flex;ali
 .header nav{padding-inline:3.25rem;scroll-padding-inline:3.25rem;scroll-snap-type:none}
 .header nav.can-scroll-back,.header nav.can-scroll-forward{--nav-edge-mask:linear-gradient(to right,transparent,transparent 1.5rem,#000 3.25rem,#000 calc(100% - 3.25rem),transparent calc(100% - 1.5rem),transparent);-webkit-mask-image:var(--nav-edge-mask);mask-image:var(--nav-edge-mask)}
 }
+
+/* Official Font Awesome SVGs stay independent from OS emoji and text fonts. */
+.icon{display:inline-block;flex-shrink:0;width:1em;height:1em;fill:currentColor;vertical-align:-.125em;overflow:visible}
+.icon[hidden]{display:none}
+.icon-diagonal{transform:rotate(45deg)}
+.stars{display:inline-flex;gap:.18rem;letter-spacing:0}
+.nav-arrow .icon{width:1rem;height:1rem}
+.text-link{gap:.5rem}
+/* Constrain the native date control, including WebKit's intrinsic sizing. */
+.contact>*{min-width:0}
+.form-row{min-width:0;width:100%}
+input[type="date"]{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:100%;min-width:0;max-width:100%;inline-size:100%;min-inline-size:0;max-inline-size:100%;height:3rem;text-align:left}
+input[type="date"]::-webkit-date-and-time-value{min-width:0;margin:0;text-align:left}
+input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
+input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:pointer}

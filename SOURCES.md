@@ -13,3 +13,7 @@ Texte fourni directement par le propriétaire : Big Brothers devient une agence 
 ## Wedding Awards 2024
 
 Le propriétaire a fourni le diplôme « Wedding Awards 2024 (1).pdf » et le communiqué « Wedding Awards 2024 Communiqué de Presse.pdf ». Les deux PDF ont été relus intégralement et copiés sans modification dans dist/documents/. Le badge officiel a été extrait de la première page du diplôme et rendu en PNG, sans redessiner son contenu. Il est désormais hébergé localement dans dist/assets/wedding-awards-2024.png ; aucune requête vers le CDN Mariages.net n’est nécessaire. L’année 2024 est conservée. Le communiqué mentionne 31 avis. Le 28 septembre 2026, le propriétaire a confirmé la mise à jour du compteur du site à 31 avis ; cette valeur reste renseignée manuellement. Les coordonnées présentes dans le communiqué sont celles déjà publiques sur le site.
+
+## Icônes
+
+Font Awesome Free 6.7.2, SVG Solid : arrow-up (également tourné à 45° pour les liens), arrow-down, arrow-left, arrow-right, star, pause et play. Sources officielles : https://github.com/FortAwesome/Font-Awesome/tree/6.7.2/svgs/solid . Icônes sous CC BY 4.0, copyright Fonticons, Inc. Les SVG originaux et LICENSE.txt sont conservés dans dist/assets/icons/fontawesome/ ; les copies intégrées ajoutent la couleur héritée, les dimensions et les attributs d’accessibilité. Guide : https://docs.fontawesome.com/web/add-icons/svg-bare .

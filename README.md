@@ -86,6 +86,8 @@ Aucun serveur n’envoie les messages et aucune base de données ne stocke les d
 
 ## Accessibilité et vérifications
 
+Correction du 6 octobre 2026 : icônes SVG et champ date vérifiés sous Chromium (Edge) et WebKit aux largeurs 320, 390, 430, 768 et 1 440 px, champ vide et rempli, avec contrôles complémentaires du formulaire et du texte à 200 %. Firefox a été téléchargé mais son lancement échoue dans cet environnement Windows (configuration côte-à-côte) : ce moteur et les sélecteurs natifs sur appareils physiques restent à vérifier. Ces essais ne garantissent pas tous les téléphones ou toutes les versions d’OS.
+
 Le site prévoit des libellés de formulaire, des indicateurs de focus, un lien d’évitement et des commandes utilisables au clavier. Les animations respectent la préférence `prefers-reduced-motion`.
 
 Lors des dernières modifications, des contrôles locaux ont couvert les largeurs de 320 à 1 440 px, l’agrandissement du texte à 200 %, le chargement des polices locales et les interactions principales. Ces contrôles ne constituent pas un audit complet d’accessibilité ni une validation sur tous les appareils.
@@ -116,3 +118,4 @@ Le fichier `.openai/hosting.json` référence la copie Sites existante. Un envoi
 Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des images. Les tarifs, conditions commerciales et mentions légales doivent être validés et tenus à jour par le propriétaire du site.
 
 Les licences des polices figurent dans leurs fichiers OFL. Aucune licence générale de réutilisation du code, des photos ou des contenus n’est accordée par ce dépôt.
+Les icônes utilisent les SVG officiels Font Awesome Free 6.7.2, intégrés au HTML et servis localement. Les sources et la licence figurent dans `dist/assets/icons/fontawesome/`. Les symboles ne dépendent plus des emojis du système. Le champ date conserve le sélecteur natif de chaque navigateur, avec une largeur contrainte pour les petits écrans.
