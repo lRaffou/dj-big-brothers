@@ -112,6 +112,8 @@ if (mobileNavigation) {
     section: document.querySelector(link.getAttribute('href'))
   })).filter(entry => entry.section);
   let activeLink = null;
+  let beforeSections = true;
+  let previousPageScroll = window.scrollY;
   let navigationFrame = 0;
   const updateCurrentSection = () => {
     navigationFrame = 0;
@@ -121,20 +123,29 @@ if (mobileNavigation) {
       const bounds = section.getBoundingClientRect();
       return bounds.top <= marker && bounds.bottom > marker;
     })?.link || null;
+    const atStart = sectionLinks.every(({ section }) => section.getBoundingClientRect().top > marker);
+    const returningToStart = (atStart && !beforeSections) || (window.scrollY <= 0 && previousPageScroll > 0);
+    beforeSections = atStart;
+    previousPageScroll = window.scrollY;
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+    if (returningToStart) requestAnimationFrame(() => {
+      if (beforeSections) mobileNavigation.scrollTo({ left: 0, behavior });
+    });
     if (current === activeLink) return;
     sectionLinks.forEach(({ link }) => {
       if (link === current) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
     activeLink = current;
-    if (current && window.matchMedia('(max-width: 63.999rem)').matches) {
+    if (current && window.matchMedia('(max-width: 63.999rem)').matches) requestAnimationFrame(() => {
+      if (current !== activeLink) return;
       const bounds = mobileNavigation.getBoundingClientRect();
       const linkBounds = current.getBoundingClientRect();
       if (linkBounds.left < bounds.left + 52 || linkBounds.right > bounds.right - 52) {
         const left = mobileNavigation.scrollLeft + linkBounds.left - bounds.left - (bounds.width - linkBounds.width) / 2;
-        mobileNavigation.scrollTo({ left, behavior: 'instant' });
+        mobileNavigation.scrollTo({ left, behavior });
       }
-    }
+    });
   };
   const scheduleCurrentSection = () => {
     if (!navigationFrame) navigationFrame = requestAnimationFrame(updateCurrentSection);
