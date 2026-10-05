@@ -17,6 +17,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
 - Mise en page mobile first, avec adaptation progressive aux tablettes et ordinateurs. Navigation horizontale au toucher sur petit écran, avec une flèche cliquable à chaque extrémité, centrée sur les textes, un lien actif légèrement agrandi sur mobile qui suit la section visible, et un fondu du texte sous les flèches ; navigation complète sur ordinateur et liens accessibles au clavier.
 
+- Liens de navigation dans l’ordre des sections : Vos événements, L’esprit Big Brothers, Les avis, Tarifs, Contact.
 - Navigation compacte fixe après défilement, avec la marque DJ Big Brothers, un suivi horizontal doux de la rubrique visible, un retour au début du menu en remontant à l’accueil et un décalage des ancres adapté à sa hauteur ; le logo principal et le bouton de contact défilent normalement.
 
 ## Technologies
