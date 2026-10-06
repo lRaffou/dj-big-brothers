@@ -1,8 +1,24 @@
 /* Same approved local font families and weights as the main site. */
-.legal-content{max-width:58rem;padding-block:2rem 4rem}
-.legal-content h1{font:700 clamp(2.75rem,9vw,4.5rem)/1.06 'Barlow Condensed','Arial Narrow',sans-serif;margin:0 0 2.5rem;hyphens:none}
+.legal-content{max-width:58rem;padding-block:1rem 4rem}
+.legal-page .header{border-bottom:1px solid var(--line)}
+.legal-back{display:inline-flex;align-items:center;gap:.625rem;min-height:2.75rem;margin-bottom:1rem;font-size:.875rem;color:var(--muted)}
+.legal-content .legal-back{text-decoration:none}
+.legal-back:hover{color:var(--accent)}
+.legal-page-nav{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;padding-block:.75rem;margin-bottom:2.5rem;border-block:1px solid var(--line)}
+.legal-page-nav a{display:inline-flex;align-items:center;min-height:2.75rem;max-width:100%;font-size:.875rem}
+.legal-content .legal-page-nav a{text-decoration:none}
+.legal-page-nav a:hover,.legal-page-nav a[aria-current="page"]{color:var(--accent)}
+.legal-page-nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:.35em}
+.legal-heading{margin-bottom:1.5rem}
+.legal-content .legal-updated{font-size:.8125rem;margin:.875rem 0 0}
+.legal-content section{padding-block:1.5rem;border-top:1px solid var(--line)}
+.legal-content section p:last-child{margin-bottom:0}
+.legal-content>.draft-note{margin:0 0 2rem}
+.legal-content dl{margin-bottom:1.5rem}
+@media(min-width:48rem){.legal-content{padding-block:1.5rem 5rem}.legal-content section{padding-block:2rem}}
+.legal-content h1{font:700 clamp(2.75rem,9vw,4.5rem)/1.06 'Barlow Condensed','Arial Narrow',sans-serif;margin:0;hyphens:none}
 .legal-content h2{font-size:2rem;margin:0 0 1rem}
-.legal-content section+section{margin-top:2.5rem}
+.legal-content section+section{margin-top:0}
 .legal-content p,.legal-content dd{color:var(--muted)}
 .legal-content a{text-decoration:underline;text-underline-offset:.2em}
 .legal-content dt{font-weight:600;margin-top:1rem}

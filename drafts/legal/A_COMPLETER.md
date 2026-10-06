@@ -1,30 +1,36 @@
 # Dernières informations pour finaliser les pages Big Brothers
 
-Les trois pages et leur intégration sont préparées dans [l’aperçu](preview.html). Les versions complètes restent en brouillon ; des versions publiques provisoires sont accessibles depuis le footer et signalent les informations manquantes. Les polices et le design sont conservés.
+Mise à jour : 6 octobre 2026. Les pages publiques restent provisoires ; les versions de travail conservent les notes à compléter. Polices, couleurs et navigation sont harmonisées avec le site.
 
 ## Déjà renseigné — inutile de le redemander
 
 - Agence Big Brothers ; DJs Sophie, Yoan, Thao et Yo ; prestations musicales pour mariages, événements privés et professionnels.
+- Responsable du site et de publication : Dao Van Thao, selon sa réponse au message demandant ces informations.
+- Adresse communiquée : 270 avenue Charles de Gaulle, 82000 Montauban, France.
 - Contact : djbigbrothers.music@gmail.com ; 06 98 96 46 79.
-- Organisme qui facture : association REGARTS / REG@RTS, SIREN 501 634 505, SIRET 501 634 505 00033, 7 rue Bernard Palissy, 31200 Toulouse ; numéro de TVA FR34501634505.
-- Deux ans pour les demandes de devis et les dossiers clients ; les pièces à conserver légalement sont traitées séparément.
-- GitHub Pages pour l’hébergement ; formulaire mailto ; Gmail pour la réception ; polices locales ; pas de traceur détecté sur cette version.
-- Aucun rôle juridique attribué à YO Production ou à son ancienne directrice de publication.
+- Facturation : association REGARTS / REG@RTS, SIREN 501 634 505, SIRET 501 634 505 00033, 7 rue Bernard Palissy, 31200 Toulouse ; TVA FR34501634505.
+- Deux ans annoncés pour les demandes de devis et dossiers clients, sans point de départ confirmé. Les archives légales suivent leurs durées propres.
+- GitHub Pages, formulaire mailto, Gmail pour la réception, ressources locales et absence de traceur dans le code du site.
+- Aucune prestation vidéo ni implication de Jessica Nadim dans cette activité. Les anciennes CGV vidéo ne sont pas utilisées.
 
-## Les quatre réponses utiles
+## À demander à REGARTS par le client
 
-1. **Au nom de qui le site Big Brothers est-il publié ?** Nom légal de la personne ou structure responsable, adresse professionnelle, statut/immatriculation si distinct de REGARTS ; nom et fonction du responsable de publication. Le créateur technique du site n’est pas automatiquement son éditeur.
-2. **Le modèle de devis ou contrat DJ et les CGV utilisés par REGARTS**, sans données de clients. Il doit permettre d’identifier qui s’engage envers les clients et de préciser réservation, avance (acompte ou arrhes), solde, frais, annulation/report et rétractation. Si ces éléments ne figurent pas dans le document, demander seulement ceux qui manquent. Ne pas déduire les règles générales d’une facture particulière.
-3. **Le médiateur couvrant ces contrats** : nom, adresse et site, à demander à REGARTS. Ne pas choisir un organisme arbitrairement : il faut celui dont relève effectivement le prestataire.
-4. **Le fonctionnement des dossiers** : date de départ des deux ans ; outils autres que Gmail, y compris ceux de REGARTS ; personne ou structure qui décide de leur utilisation et personnes/organismes qui y ont accès. Ces réponses permettent de terminer la répartition des rôles et la confidentialité.
+1. Modèle vierge ou anonymisé de devis/contrat DJ et CGV applicables. Confirmer qui s’engage envers le client, le rôle de REGARTS et la structure juridique portant l’activité. Le statut de Dao Van Thao ne doit pas être déduit de son nom ou de son adresse.
+2. Modalités figurant dans ces documents : réservation, avance (acompte ou arrhes, montant), solde, frais, annulation, report, rétractation. Ne demander un complément que si le document ne répond pas au point.
+3. Nom, adresse et site du médiateur couvrant effectivement ces contrats ; confirmer l’adhésion ou la couverture, ou indiquer l’absence de dispositif.
+4. Notice de confidentialité relative aux données reçues par REGARTS, ou informations sur leurs usages, outils, accès, durées d’archivage et contact pour les droits.
+
+## À préciser directement par le client
+
+- Point de départ des deux ans pour les demandes sans réservation, puis pour les événements réalisés ; pratique réelle de suppression ou d’archivage.
+- Outils utilisés en plus de Gmail, personnes ayant accès aux dossiers et informations transmises à REGARTS.
+- Qui décide de l’utilisation et de la conservation des dossiers et traite les demandes concernant les données, afin de préciser les responsabilités.
 
 ## Message court à transmettre
 
-Bonjour, j’ai pu compléter les informations de REGARTS et préparer les pages du site. Il reste quatre points :
+Salut ! Merci, j’ai intégré les coordonnées de Dao Van Thao pour le site et celles de REGARTS pour la facturation. Il manque seulement :
 
-- Au nom de quelle personne ou structure publie-t-on le site Big Brothers, avec quelle adresse professionnelle, et qui en est responsable de publication ?
-- Peux-tu transmettre un modèle de devis/contrat DJ et les CGV applicables chez REGARTS, sans les informations des clients ?
-- Quel médiateur de la consommation couvre ces prestations chez REGARTS (nom, adresse et site) ?
-- Les deux ans pour les devis et dossiers clients commencent à quelle date ? Quels outils utilisez-vous en plus de Gmail, qui gère les dossiers et qui y a accès ?
+- À demander à REGARTS : un modèle vierge de devis/contrat DJ avec les conditions de vente et la confirmation de qui s’engage envers le client ; les coordonnées du médiateur qui couvre ces contrats ; leur notice de confidentialité pour les données clients reçues.
+- De ton côté : à partir de quand comptes-tu les deux ans pour les demandes sans réservation et les événements réalisés ? Quels outils utilises-tu en plus de Gmail, qui gère et consulte les dossiers, et quelles informations transmets-tu à REGARTS ?
 
-Merci !
+Pas besoin de renvoyer ton nom, ton adresse ou une nouvelle facture. Merci !

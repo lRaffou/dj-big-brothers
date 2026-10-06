@@ -5,6 +5,7 @@ Ces fichiers sont les versions de travail détaillées, avec les champs à compl
 ## Informations retenues après le retour du client
 
 - L’activité présentée est une agence de DJs ; les conditions vidéo sont écartées.
+- Retour client intégré le 6 octobre 2026 : Dao Van Thao, responsable du site et de publication ; 270 avenue Charles de Gaulle, 82000 Montauban ; djbigbrothers.music@gmail.com. Aucun statut juridique ou numéro d’immatriculation personnel n’est déduit de ces coordonnées.
 - Les anciennes désignations de YO Production comme éditeur, vendeur et responsable des données sont retirées, ainsi que la direction de publication précédemment proposée à partir du site vidéo.
 - REGARTS (REG@RTS), association loi 1901 ou assimilée, est identifiée comme organisme de facturation : SIREN 501 634 505 ; SIRET 501 634 505 00033 ; 7 rue Bernard Palissy, 31200 Toulouse ; TVA FR34501634505. Ces informations ont été recoupées avec la fiche publique Societe.com fournie.
 - Deux ans est la durée de conservation annoncée pour les demandes de devis et dossiers clients, selon la précision du propriétaire. Le point de départ doit être précisé ; cette durée ne remplace pas les obligations d’archivage des pièces comptables.
@@ -12,7 +13,7 @@ Ces fichiers sont les versions de travail détaillées, avec les champs à compl
 
 ## Informations encore nécessaires
 
-1. Identité et adresse de l’éditeur du site, nom et qualité du directeur de publication. Ne pas attribuer automatiquement ces fonctions à REGARTS du seul fait qu’elle facture.
+1. Les coordonnées du responsable du site et de publication sont renseignées : ne plus les redemander. Le contrat DJ doit permettre de clarifier la structure portant l’activité et de compléter son statut juridique sans l’inventer.
 2. Rôle exact de REGARTS dans le contrat : prestataire contractuel, mandataire de facturation ou autre cadre. Obtenir le modèle de devis/contrat DJ et les CGV applicables, sans données de clients.
 3. Médiateur de la consommation effectivement désigné : nom, adresse et site. Demander à REGARTS si son dispositif couvre ces contrats. Le prestataire ne peut pas être médiateur de ses propres litiges.
 4. Réservation, avance (nature et montant), échéances, paiement, annulation/report et rétractation. Une facture particulière ne suffit pas à généraliser une règle commerciale ou un taux de TVA.

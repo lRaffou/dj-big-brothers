@@ -1,4 +1,4 @@
 /* Shared legal styles; only the draft notice differs from the public pages. */
-@import url('../../dist/legal.css?v=20261006-cleanup');
+@import url('../../dist/legal.css?v=20261006-legal');
 
 .legal-preview-note{padding-block:.75rem;border-block:1px solid var(--line);font-size:.875rem;color:var(--muted)}
