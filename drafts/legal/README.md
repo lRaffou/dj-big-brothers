@@ -25,7 +25,7 @@ Le badge Wedding Awards 2024 et les deux PDF fournis sont désormais hébergés 
 
 ## Intégration après résolution
 
-Compléter les champs entre crochets puis retirer les notes de rédaction. Copier les pages et legal.css dans dist/, adapter les liens preview.html vers index.html et ../../dist/ vers des chemins locaux, retirer noindex,nofollow et dater les documents. Reprendre dans l’accueil la navigation légale et la mention de confidentialité visibles dans l’aperçu. Vérifier le rendu mobile et les liens, puis publier. Les pages légales n’utilisent pas script.js, qui dépend des éléments de l’accueil.
+Compléter les champs entre crochets puis retirer les notes de rédaction. Copier les pages dans dist/ en conservant le fichier dist/legal.css partagé, adapter les liens preview.html vers index.html et ../../dist/ vers des chemins locaux, retirer noindex,nofollow et dater les documents. Reprendre dans l’accueil la navigation légale et la mention de confidentialité visibles dans l’aperçu. Vérifier le rendu mobile et les liens, puis publier. Les pages légales ne chargent pas script.js, car elles ne nécessitent pas les interactions de l’accueil. Le script initialise désormais chaque composant uniquement s’il est présent. Le fichier legal.css de ce dossier importe ../../dist/legal.css et ajoute seulement le style de la note de brouillon.
 
 ## Sources et portée
 

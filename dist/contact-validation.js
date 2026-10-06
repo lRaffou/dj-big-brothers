@@ -1,5 +1,6 @@
 // Browser-side checks for a mailto draft, not a server security boundary.
 const enquiryValidation = (() => {
+  const recipient = 'djbigbrothers.music@gmail.com';
   const limits = { prenom: 80, lieu: 160, message: 1000 };
   const namePattern = /^\p{L}[\p{L}\p{M} '\u2019\u02BC.\-\u2010\u2011\u200C\u200D]*$/u;
   const singleLinePattern = /^[^\p{Cc}\p{Cs}\u2028\u2029]*$/u;
@@ -40,10 +41,10 @@ const enquiryValidation = (() => {
     const formattedDate = date.toLocaleDateString('fr-FR');
     const body = `Bonjour l’équipe Big Brothers,\n\nJe m'appelle ${values.prenom}. Nous préparons un événement le ${formattedDate}, à ${values.lieu}.\n\n${values.message}\n\nVotre équipe est-elle disponible à cette date ? Pourrions-nous échanger sur votre prestation et un devis ?\n\nMerci !`;
     // The recipient is fixed. Encode each parameter once; never interpret input as HTML.
-    const href = `mailto:djbigbrothers.music@gmail.com?subject=${encodeURIComponent(`Événement du ${formattedDate} — demande de devis`)}&body=${encodeURIComponent(body)}`;
+    const href = `mailto:${recipient}?subject=${encodeURIComponent(`Événement du ${formattedDate} — demande de devis`)}&body=${encodeURIComponent(body)}`;
     return { errors, href, values };
   };
-  return Object.freeze({ prepare, localDate });
+  return Object.freeze({ prepare, localDate, recipient });
 })();
 
 // Reuse the same validation in Node's regression tests, without browser dependencies.

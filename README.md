@@ -78,7 +78,7 @@ Le dossier `.sites-runtime/` et les archives `*.tar.gz` sont des fichiers de tra
 
 Les variables CSS de `:root` définissent la palette. Les styles de base ciblent le mobile ; les règles `min-width` ajoutent les dispositions pour les écrans plus larges.
 
-Pour changer l’adresse de réception des demandes, modifier les liens de contact dans `dist/index.html` **et** l’adresse utilisée dans `dist/contact-validation.js` (ainsi que le texte de secours dans `dist/script.js`).
+Pour changer l’adresse de réception des demandes, modifier les liens de contact dans `dist/index.html` **et** l’adresse utilisée dans `dist/contact-validation.js` (le texte de secours du formulaire réutilise automatiquement cette adresse).
 
 ## Fonctionnement du contact
 
@@ -90,7 +90,13 @@ Aucun serveur n’envoie les messages et aucune base de données ne stocke les d
 
 Les contrôles locaux limitent le prénom à 80 caractères, le lieu à 160 et le message à 1 000. Les prénoms acceptent les lettres Unicode et les ponctuations usuelles ; les dates doivent exister et ne pas être passées. Les caractères de contrôle sont refusés, hormis les retours à la ligne et tabulations dans le message. Le destinataire est fixe et les paramètres du lien e-mail sont encodés séparément. Le formulaire est désactivé sans JavaScript et la politique CSP bloque toute soumission HTML classique (aucune donnée dans l’URL du site), les éléments object et les changements de base URL.
 
-Ces validations côté navigateur peuvent être contournées : elles ne remplacent pas des contrôles côté serveur si un service d’envoi est ajouté. Elles n’offrent pas de protection antispam de la boîte e-mail publique. Tests de régression : `node --test tests/contact-validation.test.cjs`. Référence : [OWASP Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
+Ces validations côté navigateur peuvent être contournées : elles ne remplacent pas des contrôles côté serveur si un service d’envoi est ajouté. Elles n’offrent pas de protection antispam de la boîte e-mail publique. Tests de régression : `node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs`. Référence : [OWASP Input Validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
+
+## Organisation du JavaScript et des styles
+
+Chaque interaction de l’accueil possède sa fonction d’initialisation dans `dist/script.js` (formulaire, bannière, retour en haut, badge et navigation). Les composants absents sont ignorés. Les calculs de centrage, la préférence de réduction des animations et la planification par frame sont partagés ; le défilement horizontal ne recalcule plus la largeur de chaque lien à chaque événement.
+
+Les styles juridiques des brouillons importent `dist/legal.css` : modifier ce fichier commun, pas une copie. Les documents juridiques de travail et les pages publiques restent distincts car leur contenu diffère. Les SVG restent intégrés au HTML pour conserver leur affichage et leur couleur sans JavaScript, y compris en ouvrant directement les fichiers locaux ; les originaux et leur licence sont conservés.
 
 ## Accessibilité et vérifications
 
@@ -108,9 +114,9 @@ node --check dist/script.js
 
 ## Hébergement
 
-Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) publie uniquement le contenu de `dist/` sur GitHub Pages, sans compilation.
+Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) contrôle la syntaxe JavaScript, les validations du formulaire et les liens locaux avant de publier uniquement `dist/` sur GitHub Pages, sans compilation. Il utilise Node.js 24 et les versions actuelles des actions Pages. Un test en échec bloque la publication.
 
-- Une modification de `dist/` ou du workflow envoyée sur `main` déclenche une publication.
+- Une modification de `dist/`, des tests, des brouillons juridiques ou du workflow envoyée sur `main` déclenche les vérifications puis une publication.
 - Une modification du README seul ne déclenche pas de publication du site.
 - Pour republier manuellement : **Actions → Publish website to GitHub Pages → Run workflow**, puis sélectionner `main`.
 - Dans **Settings → Pages**, la source de publication est **GitHub Actions**.
