@@ -17,3 +17,7 @@ Le propriétaire a fourni le diplôme « Wedding Awards 2024 (1).pdf » et le co
 ## Icônes
 
 Font Awesome Free 6.7.2, SVG Solid : arrow-up (également tourné à 45° pour les liens), arrow-down, arrow-left, arrow-right, star, pause et play. Sources officielles : https://github.com/FortAwesome/Font-Awesome/tree/6.7.2/svgs/solid . Icônes sous CC BY 4.0, copyright Fonticons, Inc. Les SVG originaux et LICENSE.txt sont conservés dans dist/assets/icons/fontawesome/ ; les copies intégrées ajoutent la couleur héritée, les dimensions et les attributs d’accessibilité. Guide : https://docs.fontawesome.com/web/add-icons/svg-bare .
+
+## Réseaux sociaux
+
+Profil Instagram fourni par le propriétaire : https://www.instagram.com/djbigbrothers/ . Liens simples depuis le contact et les pieds de page, sans contenu intégré ni script Instagram. Icône Instagram : Font Awesome Free 6.7.2, SVG Brands, source officielle https://github.com/FortAwesome/Font-Awesome/blob/6.7.2/svgs/brands/instagram.svg ; SVG original et licence conservés dans dist/assets/icons/fontawesome/.

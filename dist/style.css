@@ -230,3 +230,9 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 /* Indicate invalid fields without changing the typography. */
 #enquiry [aria-invalid="true"]{border-color:#ffb6ad}
 #enquiry button:disabled{opacity:.6;cursor:not-allowed}
+
+/* Shared social link, in the contact area and every footer. */
+.social-link{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-size:.875rem;color:var(--muted)}
+.social-link .icon{width:1.125rem;height:1.125rem}
+.social-link:hover,.social-link:focus-visible{color:var(--accent)}
+.contact-social{margin:1rem 0 0}
