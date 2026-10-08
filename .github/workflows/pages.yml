@@ -40,6 +40,7 @@ jobs:
         run: |
           node --check dist/script.js
           node --check dist/contact-validation.js
+          node --check dist/legal-navigation.js
           node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v6
