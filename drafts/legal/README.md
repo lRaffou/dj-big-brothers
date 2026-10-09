@@ -12,17 +12,13 @@ Ces fichiers sont les versions de travail détaillées, avec les champs à compl
 - Gmail confirmé pour les demandes. Le propriétaire demande de conserver deux ans et autorise le choix du point de départ : dernier contact émanant du demandeur pour un devis sans suite ; fin de la prestation pour le suivi d’un client (clôture de la réservation en cas d’annulation). Les archives légales/contentieuses sont séparées. Il s’agit d’une politique à appliquer par l’agence, pas d’une suppression automatique mise en place dans Gmail.
 - La facture privée n’est ni copiée ni publiée : aucun nom ou adresse de client, numéro de dossier, montant individuel, détail bancaire ou image source ne doit être ajouté au dépôt.
 
-## Charte REGARTS reçue le 8 octobre 2026
-
-Le PDF local FONCTIONNEMENT-BP-REGARTS-04_2023-V5.pdf (avril 2023, 11 pages) décrit le bureau de production : gestion administrative, devis/contrats de cession, facturation, suivi des règlements et tableau Google Drive. Ces éléments sont intégrés avec mention de la date de la source. Le document n’est pas copié dans le dépôt ni publié. Ce n’est pas le contrat ou les CGV des clients Big Brothers ; ni l’identité définitive du cocontractant ni l’usage actuel du tableau ne sont déduits automatiquement. Les montants de paie, les commissions internes et la TVA présentés dans cette charte ne sont pas transposés au site. Voir A_COMPLETER.md pour les passages et questions restants.
-
 ## Informations encore nécessaires
 
 1. Les coordonnées du responsable du site et de publication sont renseignées : ne plus les redemander. Le contrat DJ doit permettre de clarifier la structure portant l’activité et de compléter son statut juridique sans l’inventer.
-2. Rôle administratif documenté par la charte ; identifier dans le contrat DJ le prestataire qui s’engage juridiquement envers le client. Obtenir le modèle de devis/contrat DJ et les CGV applicables, sans données de clients.
+2. Rôle exact de REGARTS dans le contrat : prestataire contractuel, mandataire de facturation ou autre cadre. Obtenir le modèle de devis/contrat DJ et les CGV applicables, sans données de clients.
 3. Médiateur de la consommation effectivement désigné : nom, adresse et site. Demander à REGARTS si son dispositif couvre ces contrats. Le prestataire ne peut pas être médiateur de ses propres litiges.
 4. Autres conditions de réservation, échéance du solde, annulation/report et rétractation. L’acompte de 50 % et le virement direct à REGARTS sont confirmés ; ne plus les redemander. Une facture particulière ne suffit pas à généraliser un taux de TVA.
-5. Répartition des rôles pour les données, usage actuel du tableau Google Drive décrit dans la charte, accès aux dossiers, éventuels autres outils, transferts et durées d’archivage propres à REGARTS. Les points de départ des deux ans sont définis.
+5. Répartition des rôles avec REGARTS, accès aux dossiers, éventuels outils autres que Gmail, transferts et durées d’archivage propres à REGARTS. Les points de départ des deux ans sont définis.
 Les coordonnées de GitHub Pages ont été complétées, téléphone +1 877 448 4820 recoupé dans les sources listées ci-dessous. La synthèse des quatre réponses à obtenir figure dans [A_COMPLETER.md](A_COMPLETER.md).
 
 ## Vérification technique effectuée
@@ -48,3 +44,7 @@ Compléter les champs entre crochets puis retirer les notes de rédaction. Copie
 - https://policies.google.com/privacy?hl=fr : confidentialité de la messagerie Google.
 
 Les PDF vidéo fournis précédemment ne sont plus la base juridique de l’activité DJ. Les brouillons ne constituent pas une validation de conformité.
+
+## Publication des informations REGARTS
+
+Le 9 octobre 2026, retrait des synthèses tirées du document de fonctionnement interne des pages publiques et des fichiers de travail versionnés. Ne pas publier de document interne ou de détails sur les outils, équipes et procédures de REGARTS sans confirmation des informations destinées au public. Demander une formulation publiable décrivant leur rôle et les conditions applicables aux clients Big Brothers. Les coordonnées de la structure déjà fournies pour la facturation sont conservées. Ce retrait ne purge pas les anciennes versions de l’historique Git.
