@@ -1,0 +1,60 @@
+name: Prepare Hostinger deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - 'tests/**'
+      - 'drafts/legal/**'
+      - '.github/workflows/hostinger.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Set up Node.js for checks
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Check JavaScript and site integrity
+        run: |
+          node --check dist/script.js
+          node --check dist/contact-validation.js
+          node --check dist/legal-navigation.js
+          node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs
+      - name: Publish only the website to the Hostinger branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          source_commit=$(git rev-parse HEAD)
+          website_tree=$(git rev-parse HEAD:dist)
+          parent_args=()
+          if [ -n "$(git ls-remote --heads origin refs/heads/hostinger)" ]; then
+            git fetch --no-tags --depth=1 origin refs/heads/hostinger
+            previous_commit=$(git rev-parse FETCH_HEAD)
+            if [ "$(git rev-parse "$previous_commit^{tree}")" = "$website_tree" ]; then
+              echo 'Website unchanged; no deployment needed.' >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            parent_args=(-p "$previous_commit")
+          fi
+          deployment_commit=$(git commit-tree "$website_tree" "${parent_args[@]}" -m "Publish website from main $source_commit")
+          git push origin "$deployment_commit:refs/heads/hostinger"
+          echo "Prepared public website from main commit $source_commit on the hostinger branch. Hostinger deployment is handled by its Git integration." >> "$GITHUB_STEP_SUMMARY"

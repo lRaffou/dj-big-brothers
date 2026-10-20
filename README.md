@@ -2,9 +2,9 @@
 
 Site vitrine de Big Brothers, agence de DJs et de solutions musicales pour les mariages, soirées privées et événements professionnels à Toulouse, Montauban et dans les environs. Équipe : Sophie, Yoan, Thao et Yo.
 
-[Consulter le site](https://lraffou.github.io/dj-big-brothers/) · [Déploiements](https://github.com/lRaffou/dj-big-brothers/actions/workflows/pages.yml) · [Sources des contenus](SOURCES.md)
+[Consulter le site](https://djbigbrothers.fr/) · [Préparation des publications Hostinger](https://github.com/lRaffou/dj-big-brothers/actions/workflows/hostinger.yml) · [Sources des contenus](SOURCES.md)
 
-Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée existe aussi sur [Sites](https://dj-big-brothers.raffou2.chatgpt.site) ; sa publication est indépendante.
+Le site principal est hébergé chez Hostinger sur **djbigbrothers.fr**. GitHub Pages conserve une copie de prévisualisation depuis ce dépôt public. Une copie privée existe aussi sur [Sites](https://dj-big-brothers.raffou2.chatgpt.site) ; sa publication est indépendante.
 
 ## Fonctionnalités
 
@@ -52,7 +52,8 @@ Ouvrir ensuite [http://localhost:8080](http://localhost:8080). Sur Windows, util
 ├── README.md
 ├── SOURCES.md             # Provenance des textes, tarifs et photos
 ├── .github/workflows/
-│   └── pages.yml         # Publication automatique sur GitHub Pages
+│   ├── hostinger.yml     # Vérifie main et publie uniquement dist sur la branche hostinger
+│   └── pages.yml         # Copie de prévisualisation GitHub Pages
 ├── .openai/hosting.json   # Identifiant Sites et dossier statique
 └── dist/
     ├── index.html        # Structure, textes, tarifs et coordonnées
@@ -118,6 +119,22 @@ node --check dist/script.js
 ```
 
 ## Hébergement
+
+### Site principal : Hostinger
+
+Le domaine [djbigbrothers.fr](https://djbigbrothers.fr/) utilise le forfait Premium existant. Aucun serveur Node.js n’est nécessaire.
+
+Le workflow [`.github/workflows/hostinger.yml`](.github/workflows/hostinger.yml) vérifie la syntaxe JavaScript et les tests avant de copier l’arbre Git de `dist/` à la racine de la branche **`hostinger`**. Il ne publie ni les brouillons, ni les tests, ni les fichiers de configuration du dépôt. Un échec des vérifications bloque cette préparation ; si les fichiers publics sont inchangés, aucun nouveau commit de publication n’est créé.
+
+**Connexion Hostinger à activer une fois :** dans hPanel, ouvrir le tableau de bord de **djbigbrothers.fr → Avancé → Git**, autoriser GitHub pour le dépôt `lRaffou/dj-big-brothers`, sélectionner la branche **`hostinger`** et le dossier de destination **`public_html`**, puis activer le déploiement automatique. Ne pas sélectionner `main` : cette branche contient les sources dans `dist/` et les documents de travail.
+
+Après activation, le parcours est : modification de `main` → vérifications GitHub Actions → mise à jour de `hostinger` → publication par Hostinger. Ne pas modifier directement la branche `hostinger` ou les fichiers du gestionnaire Hostinger : la publication suivante les remplace. Pour annuler une modification, la corriger ou la révoquer sur `main`, puis laisser le workflow republier.
+
+Pour relancer la préparation : **Actions → Prepare Hostinger deployment → Run workflow**. Le succès du workflow confirme la préparation de la branche ; vérifier également le résultat dans l’historique Git de Hostinger et sur le domaine public. La liaison GitHub/Hostinger reste nécessaire pour que le transfert soit automatique.
+
+Les pages juridiques publiques de `dist/` mentionnent l’hébergement de production chez Hostinger et restent provisoires. Les coordonnées juridiques complètes de l’entité d’hébergement doivent encore être confirmées sur le contrat du titulaire du compte.
+
+### Copie de prévisualisation : GitHub Pages
 
 Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) contrôle la syntaxe JavaScript, les validations du formulaire et les liens locaux avant de publier uniquement `dist/` sur GitHub Pages, sans compilation. Il utilise Node.js 24 et les versions actuelles des actions Pages. Un test en échec bloque la publication.
 
