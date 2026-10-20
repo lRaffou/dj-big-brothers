@@ -1,6 +1,6 @@
 # Dernières informations pour finaliser les pages Big Brothers
 
-Mise à jour : 9 octobre 2026. Les pages publiques restent provisoires ; les versions de travail conservent les notes à compléter. Polices, couleurs et navigation sont harmonisées avec le site.
+Mise à jour : 20 octobre 2026. Les pages publiques restent provisoires ; les versions de travail conservent les notes à compléter. Polices, couleurs et navigation sont harmonisées avec le site.
 
 ## Déjà renseigné — inutile de le redemander
 
@@ -10,6 +10,7 @@ Mise à jour : 9 octobre 2026. Les pages publiques restent provisoires ; les ver
 - Contact : djbigbrothers.music@gmail.com ; 06 98 96 46 79.
 - Facturation : association REGARTS / REG@RTS, SIREN 501 634 505, SIRET 501 634 505 00033, 7 rue Bernard Palissy, 31200 Toulouse ; TVA FR34501634505.
 - Acompte de 50 % pour bloquer la date ; virements directement à REGARTS. Dao Van Thao fait la liaison avec REGARTS pour les échanges, sans être désigné comme médiateur de la consommation.
+- Source publique DJ Big Brothers vérifiée le 20 octobre 2026 : solde dans la semaine suivant le mariage ; déplacements inclus dans un rayon de 200 km autour de Montauban, avec frais possibles au-delà. Ces informations ont été intégrées et restent à rapprocher du contrat applicable.
 - Deux ans retenus à la demande du propriétaire : après le dernier contact venant du demandeur pour un devis sans réservation ; après la fin de la prestation pour le suivi client (clôture de la réservation en cas d’annulation). Les archives légales/contentieuses restent distinctes.
 - Gmail confirmé pour gérer les demandes à djbigbrothers.music@gmail.com.
 - GitHub Pages, formulaire mailto, Gmail pour la réception, ressources locales et absence de traceur dans le code du site.
@@ -18,7 +19,7 @@ Mise à jour : 9 octobre 2026. Les pages publiques restent provisoires ; les ver
 ## À demander à REGARTS par le client
 
 1. Modèle vierge ou anonymisé de devis/contrat DJ et CGV applicables. Confirmer qui s’engage envers le client, le rôle de REGARTS et la structure juridique portant l’activité. Le statut de Dao Van Thao ne doit pas être déduit de son nom ou de son adresse.
-2. Modalités encore manquantes : confirmation de réservation, échéance du solde, frais, annulation, report, rétractation. L’acompte de 50 % et le virement direct à REGARTS sont renseignés.
+2. Modalités encore manquantes : confirmation de réservation, annulation, report, rétractation et concordance du contrat avec le solde et les déplacements annoncés publiquement. L’acompte de 50 % et le virement direct à REGARTS sont renseignés.
 3. Nom, adresse et site du médiateur couvrant effectivement ces contrats ; confirmer l’adhésion ou la couverture, ou indiquer l’absence de dispositif.
 4. Notice de confidentialité relative aux données reçues par REGARTS, ou informations sur leurs usages, outils, accès, durées d’archivage et contact pour les droits.
 

@@ -10,7 +10,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .wrap{max-width:85rem;margin:auto;padding-inline:6%}
 .header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.25rem 1rem}
 .brand{font:800 1.625rem/.95 'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:-.04rem;min-height:2.75rem;display:inline-block}
-.brand>span:first-child{font-size:.875rem;vertical-align:top;letter-spacing:0}
+.brand-logo{display:block;width:4.5rem;height:4.5rem;object-fit:contain}
+.sticky-brand-logo{display:block;flex-shrink:0;width:2.25rem;height:2.25rem;object-fit:contain}
+@media(min-width:24rem){.brand-logo{width:5.5rem;height:5.5rem}}
+@media(min-width:48rem){.brand-logo{width:6rem;height:6rem}}
 .header nav{display:flex;flex-wrap:nowrap;gap:1.5rem;order:3;width:100%;min-width:0;border-top:1px solid var(--line);padding:.5rem .25rem .25rem;font-size:.875rem;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:none;scroll-padding-inline:.25rem;scrollbar-width:none}
 .header nav::-webkit-scrollbar{display:none}
 .header nav a{display:flex;align-items:center;flex:0 0 auto;white-space:nowrap;min-height:2.75rem;padding:.5rem .125rem}
@@ -216,7 +219,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 
 /* Pin only the compact navigation; reserve its original space to avoid jumps. */
 .header-navigation.is-fixed{position:fixed;top:0;left:0;right:0;z-index:30;display:grid;grid-template-columns:minmax(0,1fr);width:100%;padding:env(safe-area-inset-top,0px) 6% 0;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 4px 16px #0002}
-.header-navigation.is-fixed .sticky-brand{display:flex;align-items:center;justify-content:center;justify-self:center;min-height:1.75rem;padding:.25rem .5rem 0;font:700 1rem/1.1 'Barlow Condensed','Arial Narrow',sans-serif;color:var(--text);letter-spacing:.03rem}
+.header-navigation.is-fixed .sticky-brand{display:flex;gap:.5rem;align-items:center;justify-content:center;justify-self:center;min-height:1.75rem;padding:.25rem .5rem 0;font:700 1rem/1.1 'Barlow Condensed','Arial Narrow',sans-serif;color:var(--text);letter-spacing:.03rem}
 .header-navigation.is-fixed nav{border-top:0}
 .header-navigation.is-fixed .nav-arrow{top:.5rem}
 @media(min-width:48rem){.header-navigation.is-fixed{padding-inline:5%}}
