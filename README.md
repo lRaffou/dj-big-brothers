@@ -10,6 +10,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 
 - Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
 - Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
+- Tarifs vérifiés directement sur la [page DJ Big Brothers d’origine](https://www.yoproduction.fr/tarifs-dj-mariage-toulouse/) le 20 octobre 2026 : Fiesta 1 250 €, Festival 1 450 €, vin d’honneur Frenzysax (DJ + saxophone) 600 € TTC. Les options playlist (150 € TTC), cérémonie (200 € TTC) et fumée lourde (150 € TTC) restent inchangées.
 - Avis clients, lien vers la fiche Mariages.net et badge Wedding Awards 2024. Le badge est extrait du diplôme fourni par le propriétaire et hébergé localement, sans script ni image externe Mariages.net. Si l’image est indisponible, la mention de la récompense et le lien restent visibles. Le nombre de 31 avis reste renseigné manuellement.
 - Diplôme et communiqué Wedding Awards 2024 accessibles en PDF depuis le pied de page. Les documents originaux sont conservés ; le communiqué et le site mentionnent 31 avis, conformément à la dernière confirmation du propriétaire.
 - Lien Instagram @djbigbrothers dans le contact et tous les pieds de page, avec une icône locale et sans widget tiers.
