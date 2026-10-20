@@ -122,15 +122,15 @@ node --check dist/script.js
 
 ### Site principal : Hostinger
 
-Le domaine [djbigbrothers.fr](https://djbigbrothers.fr/) utilise le forfait Premium existant. Aucun serveur Node.js n’est nécessaire.
+Le domaine [djbigbrothers.fr](https://djbigbrothers.fr/) utilise le forfait Premium existant. Aucun serveur Node.js n’est nécessaire. L’accueil déclare cette adresse comme URL canonique pour identifier le site principal face aux copies de prévisualisation.
 
 Le workflow [`.github/workflows/hostinger.yml`](.github/workflows/hostinger.yml) vérifie la syntaxe JavaScript et les tests avant de copier l’arbre Git de `dist/` à la racine de la branche **`hostinger`**. Il ne publie ni les brouillons, ni les tests, ni les fichiers de configuration du dépôt. Un échec des vérifications bloque cette préparation ; si les fichiers publics sont inchangés, aucun nouveau commit de publication n’est créé.
 
-**Connexion Hostinger à activer une fois :** dans hPanel, ouvrir le tableau de bord de **djbigbrothers.fr → Avancé → Git**, autoriser GitHub pour le dépôt `lRaffou/dj-big-brothers`, sélectionner la branche **`hostinger`** et le dossier de destination **`public_html`**, puis activer le déploiement automatique. Ne pas sélectionner `main` : cette branche contient les sources dans `dist/` et les documents de travail.
+**Connexion Hostinger activée le 20 octobre 2026 :** le dépôt `lRaffou/dj-big-brothers`, branche **`hostinger`**, est lié à **djbigbrothers.fr**, à la racine **`public_html`**, avec le déploiement automatique activé. Pour consulter cette liaison, ouvrir **djbigbrothers.fr → Avancé → Git** dans hPanel. Ne pas sélectionner `main` : cette branche contient les sources dans `dist/` et les documents de travail.
 
-Après activation, le parcours est : modification de `main` → vérifications GitHub Actions → mise à jour de `hostinger` → publication par Hostinger. Ne pas modifier directement la branche `hostinger` ou les fichiers du gestionnaire Hostinger : la publication suivante les remplace. Pour annuler une modification, la corriger ou la révoquer sur `main`, puis laisser le workflow republier.
+Le parcours est : modification de `main` → vérifications GitHub Actions → mise à jour de `hostinger` → publication par Hostinger. Ne pas modifier directement la branche `hostinger` ou les fichiers du gestionnaire Hostinger : la publication suivante les remplace. Pour annuler une modification, la corriger ou la révoquer sur `main`, puis laisser le workflow republier.
 
-Pour relancer la préparation : **Actions → Prepare Hostinger deployment → Run workflow**. Le succès du workflow confirme la préparation de la branche ; vérifier également le résultat dans l’historique Git de Hostinger et sur le domaine public. La liaison GitHub/Hostinger reste nécessaire pour que le transfert soit automatique.
+Pour relancer la préparation : **Actions → Prepare Hostinger deployment → Run workflow**. Le succès du workflow confirme la préparation de la branche ; vérifier également le résultat dans l’historique Git de Hostinger et sur le domaine public. Conserver la liaison GitHub/Hostinger et son option de déploiement automatique activées.
 
 Les pages juridiques publiques de `dist/` mentionnent l’hébergement de production chez Hostinger et restent provisoires. Les coordonnées juridiques complètes de l’entité d’hébergement doivent encore être confirmées sur le contrat du titulaire du compte.
 
