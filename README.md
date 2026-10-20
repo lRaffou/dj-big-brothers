@@ -14,7 +14,7 @@ Le site est publié sur GitHub Pages depuis ce dépôt public. Une copie privée
 - Avis clients, lien vers la fiche Mariages.net et badge Wedding Awards 2024. Le badge est extrait du diplôme fourni par le propriétaire et hébergé localement, sans script ni image externe Mariages.net. Si l’image est indisponible, la mention de la récompense et le lien restent visibles. Le nombre de 31 avis reste renseigné manuellement.
 - Diplôme et communiqué Wedding Awards 2024 accessibles en PDF depuis le pied de page. Les documents originaux sont conservés ; le communiqué et le site mentionnent 31 avis, conformément à la dernière confirmation du propriétaire.
 - Lien Instagram @djbigbrothers dans le contact et tous les pieds de page, avec une icône locale et sans widget tiers.
-- Logo officiel fourni par le client, sur les en-têtes, pieds de page, navigation compacte et icônes du navigateur.
+- Logo officiel fourni par le client, détouré sur fond transparent et recadré, sur les en-têtes, pieds de page, navigation compacte et icônes du navigateur.
 - Questions fréquentes et détails dépliables : préparation, réservation, acompte de 50 %, solde dans la semaine suivant le mariage et déplacements inclus dans un rayon de 200 km autour de Montauban (source publique vérifiée le 20 octobre 2026).
 - Formulaire préparant une demande de devis par e-mail.
 - Bannière défilante avec pause/reprise et bouton de retour en haut.
@@ -62,7 +62,8 @@ Ouvrir ensuite [http://localhost:8080](http://localhost:8080). Sur Windows, util
     ├── fonts.css         # Déclarations des polices locales
     ├── robots.txt
     └── assets/
-        ├── logo-dj-big-brothers.webp # Logo officiel fourni par le client
+        ├── logo-dj-big-brothers.webp # Original fourni par le client
+        ├── logo-dj-big-brothers-transparent.webp # Version détourée utilisée sur le site
         ├── dj-mariage.webp
         ├── thao.webp
         └── fonts/        # Polices WOFF2 et licences

@@ -10,10 +10,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .wrap{max-width:85rem;margin:auto;padding-inline:6%}
 .header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.25rem 1rem}
 .brand{font:800 1.625rem/.95 'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:-.04rem;min-height:2.75rem;display:inline-block}
-.brand-logo{display:block;width:4.5rem;height:4.5rem;object-fit:contain}
-.sticky-brand-logo{display:block;flex-shrink:0;width:2.25rem;height:2.25rem;object-fit:contain}
-@media(min-width:24rem){.brand-logo{width:5.5rem;height:5.5rem}}
-@media(min-width:48rem){.brand-logo{width:6rem;height:6rem}}
+.brand-logo{display:block;width:4.5rem;height:auto;object-fit:contain}
+.sticky-brand-logo{display:block;flex-shrink:0;width:2.25rem;height:auto;object-fit:contain}
+@media(min-width:24rem){.brand-logo{width:5.5rem}}
+@media(min-width:48rem){.brand-logo{width:6rem}}
 .header nav{display:flex;flex-wrap:nowrap;gap:1.5rem;order:3;width:100%;min-width:0;border-top:1px solid var(--line);padding:.5rem .25rem .25rem;font-size:.875rem;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:none;scroll-padding-inline:.25rem;scrollbar-width:none}
 .header nav::-webkit-scrollbar{display:none}
 .header nav a{display:flex;align-items:center;flex:0 0 auto;white-space:nowrap;min-height:2.75rem;padding:.5rem .125rem}
