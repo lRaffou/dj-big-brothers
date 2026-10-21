@@ -17,8 +17,9 @@ test('local HTML/CSS links, assets and anchors resolve', () => {
     for (const reference of references) {
       assert.ok(!/^javascript:/i.test(reference), `Executable URL in ${file}`);
       if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(reference)) continue;
-      const url = new URL(reference, pathToFileURL(file));
-      const target = fileURLToPath(url);
+      const rooted = reference.startsWith('/');
+      const url = new URL(reference, rooted ? 'https://djbigbrothers.fr/' : pathToFileURL(file));
+      const target = rooted ? path.join(root, 'dist', decodeURIComponent(url.pathname)) : fileURLToPath(url);
       assert.ok(fs.existsSync(target), `${file}: missing ${reference}`);
       if (url.hash && target.endsWith('.html')) {
         const ids = [...fs.readFileSync(target, 'utf8').matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
@@ -47,5 +48,23 @@ test('navigation follows the page order and the contact recipient stays consiste
     const positions = [...nav.matchAll(/href="#([^"]+)"/g)].map(([, id]) => html.indexOf(`<section id="${id}"`));
     assert.ok(positions.every((position, index) => position >= 0 && (!index || position > positions[index - 1])), relative);
     assert.ok(html.includes(`href="mailto:${recipient}"`), relative);
+  }
+});
+
+
+test('error documents use local handlers and work at nested missing URLs without scripts', () => {
+  const config = fs.readFileSync(path.join(root, 'dist/.htaccess'), 'utf8');
+  for (const code of ['404', '500']) {
+    assert.ok(config.includes(`ErrorDocument ${code} /${code}.html`));
+    const html = fs.readFileSync(path.join(root, `dist/${code}.html`), 'utf8');
+    assert.ok(html.includes('name="robots" content="noindex,follow"'));
+    assert.ok(!/<script|http-equiv="refresh"/i.test(html));
+    const references = [...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(match => match[1]);
+    for (const ref of references) {
+      if (/^(mailto:|tel:)/.test(ref)) continue;
+      assert.ok(ref.startsWith('/'), `Relative error page URL: ${ref}`);
+      const url = new URL(ref, 'https://djbigbrothers.fr/missing/nested/page');
+      assert.equal(url.origin, 'https://djbigbrothers.fr');
+    }
   }
 });

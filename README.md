@@ -155,3 +155,10 @@ Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des im
 
 Les licences des polices figurent dans leurs fichiers OFL. Aucune licence générale de réutilisation du code, des photos ou des contenus n’est accordée par ce dépôt.
 Les icônes utilisent les SVG officiels Font Awesome Free 6.7.2, intégrés au HTML et servis localement. Les sources et la licence figurent dans `dist/assets/icons/fontawesome/`. Les symboles ne dépendent plus des emojis du système. Le champ date conserve le sélecteur natif de chaque navigateur, avec une largeur contrainte pour les petits écrans.
+
+
+## Pages d’erreur Hostinger
+
+`dist/.htaccess` associe les réponses 404 et 500 à `404.html` et `500.html` sans redirection externe. Les liens et ressources partent de la racine du domaine pour fonctionner sur une adresse inexistante imbriquée. Les deux pages fonctionnent sans JavaScript ; la 500 possède aussi des styles de secours intégrés et des contacts directs. La configuration serveur concerne Hostinger ; GitHub Pages ignore `.htaccess`. Les erreurs 400/403 conservent les pages standard de l’hébergeur.
+
+Contrôler une URL inexistante après publication : le statut doit rester 404, avec le contenu personnalisé. Ne pas provoquer une panne du site pour tester la page 500.
