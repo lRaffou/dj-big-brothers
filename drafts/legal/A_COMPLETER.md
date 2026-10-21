@@ -56,3 +56,5 @@ L’identité et l’adresse ne sont plus à demander au titulaire. Ne publier a
 Hostinger indique ne pas proposer de support téléphonique. Cela ne permet pas de déduire le numéro à faire figurer dans les mentions légales. Demander au support, depuis hPanel : « Mon site est hébergé par Hostinger International Ltd. Quelle coordonnée téléphonique officielle dois-je indiquer pour l’hébergeur dans les mentions légales d’un site professionnel français ? »
 
 Le contact contractuel public est compliance@hostinger.com. Les modalités de traitement des journaux techniques propres au compte restent à confirmer auprès de l’hébergeur.
+
+Les documents Hostinger transmis le 21 octobre 2026 confirment les coordonnées contractuelles et le contact de protection des données gdpr@hostinger.com. Ils ne donnent pas le numéro téléphonique recherché ni une durée précise des journaux techniques du site. Les conditions de remboursement Hostinger et la procédure NPRD ne remplacent pas le contrat DJ, les CGV Big Brothers ou les informations à obtenir de REGARTS.
