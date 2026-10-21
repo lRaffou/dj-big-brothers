@@ -40,3 +40,8 @@ Logo officiel fourni et demandé par le client : Logo-DJ-Big-Brothers.webp, copi
 - [Politique de confidentialité Hostinger](https://www.hostinger.com/legal/privacy-policy), également fournie en PDF le 21 octobre 2026 : contact gdpr@hostinger.com pour les traitements propres à Hostinger. Les dispositions concernant le compte Hostinger ou sa plateforme ne sont pas transposées aux dossiers clients DJ.
 
 - [Fiche officielle RIPE NCC de Hostinger International Limited](https://www.ripe.net/membership/member-support/list-of-members/cy/hosting/), vérifiée directement le 21 octobre 2026 : téléphone +37064503378, adresse 61 Lordou Vyronos, Lumiel Building, 4th floor, 6023 Larnaca, Cyprus. Le numéro est présenté sur le site avec cette provenance, sans affirmer qu’il s’agit du support téléphonique ou qu’un appel a été testé.
+
+
+## Présentation validée le 21 octobre 2026
+
+Le client demande une palette dorée assortie au logo et une présentation limitée à Thao et Sophie (DJ Babe). La photo originale de Sophie, fournie par le propriétaire (WhatsApp Image 2026-10-20 at 22.25.47.jpeg), est copiée dans `dist/assets/sophie-dj-babe.jpeg` et cadrée en CSS sur le visage et le buste, sans retouche de la personne. Les avis et les polices sont conservés.

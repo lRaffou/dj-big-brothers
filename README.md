@@ -1,6 +1,6 @@
 # DJ Big Brothers
 
-Site vitrine de Big Brothers, agence de DJs et de solutions musicales pour les mariages, soirées privées et événements professionnels à Toulouse, Montauban et dans les environs. Équipe : Sophie, Yoan, Thao et Yo.
+Site vitrine de Big Brothers, agence de DJs et de solutions musicales pour les mariages, soirées privées et événements professionnels à Toulouse, Montauban et dans les environs. Portraits présentés : Thao et Sophie (DJ Babe).
 
 [Consulter le site](https://djbigbrothers.fr/) · [Préparation des publications Hostinger](https://github.com/lRaffou/dj-big-brothers/actions/workflows/hostinger.yml) · [Sources des contenus](SOURCES.md)
 
@@ -8,7 +8,7 @@ Le site principal est hébergé chez Hostinger sur **djbigbrothers.fr**. GitHub 
 
 ## Fonctionnalités
 
-- Présentation de l’agence, de ses quatre DJs et de ses prestations musicales, techniques et scénographiques.
+- Présentation de l’agence, de Thao et Sophie (DJ Babe) et de ses prestations musicales, techniques et scénographiques.
 - Formules mariage Fiesta et Festival, tarifs et options détaillées ; autres événements sur devis.
 - Tarifs vérifiés directement sur la [page DJ Big Brothers d’origine](https://www.yoproduction.fr/tarifs-dj-mariage-toulouse/) le 20 octobre 2026 : Fiesta 1 250 €, Festival 1 450 €, vin d’honneur Frenzysax (DJ + saxophone) 600 € TTC. Les options playlist (150 € TTC), cérémonie (200 € TTC) et fumée lourde (150 € TTC) restent inchangées.
 - Avis clients, lien vers la fiche Mariages.net et badge Wedding Awards 2024. Le badge est extrait du diplôme fourni par le propriétaire et hébergé localement, sans script ni image externe Mariages.net. Si l’image est indisponible, la mention de la récompense et le lien restent visibles. Le nombre de 31 avis reste renseigné manuellement.
