@@ -45,3 +45,8 @@ Logo officiel fourni et demandé par le client : Logo-DJ-Big-Brothers.webp, copi
 ## Présentation validée le 21 octobre 2026
 
 Le client demande une palette dorée assortie au logo et une présentation limitée à Thao et Sophie (DJ Babe). La photo originale de Sophie, fournie par le propriétaire (WhatsApp Image 2026-10-20 at 22.25.47.jpeg), est copiée dans `dist/assets/sophie-dj-babe.jpeg` et cadrée en CSS sur le visage et le buste, sans retouche de la personne. Les avis et les polices sont conservés.
+
+
+### Portraits et noms de scène
+
+Sur demande du propriétaire, Sophie est détourée avec imagegen à partir de la photo fournie ; le fichier transparent `sophie-dj-babe-detouree.png` remplace son affichage avec décor. La photo originale reste conservée. Le propriétaire confirme le nom de scène de Thao : DJ Red Marshal.
