@@ -67,9 +67,21 @@
   function initBackToTop() {
     const backToTop = document.querySelector('.back-to-top');
     if (!backToTop) return;
-    const updateBackToTop = () => { backToTop.hidden = window.scrollY < 400; };
-    window.addEventListener('scroll', updateBackToTop, { passive: true });
-    window.addEventListener('pageshow', updateBackToTop);
+    const form = document.querySelector('#enquiry');
+    const updateBackToTop = () => {
+      // Leave the whole mobile form clear, including while the keyboard is open.
+      const bounds = form && mobileNavigationQuery.matches ? form.getBoundingClientRect() : null;
+      const formVisible = bounds && bounds.bottom > 0 && bounds.top < window.innerHeight;
+      backToTop.hidden = window.scrollY < 400 || Boolean(formVisible);
+    };
+    const scheduleBackToTop = createFrameScheduler(updateBackToTop);
+    window.addEventListener('scroll', scheduleBackToTop, { passive: true });
+    window.addEventListener('resize', scheduleBackToTop);
+    window.addEventListener('pageshow', scheduleBackToTop);
+    window.visualViewport?.addEventListener('resize', scheduleBackToTop);
+    if (form && typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(scheduleBackToTop).observe(form);
+    }
     updateBackToTop();
     backToTop.addEventListener('click', () => {
       document.querySelector('#haut')?.focus({ preventScroll: true });
