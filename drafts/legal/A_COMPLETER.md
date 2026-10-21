@@ -49,12 +49,12 @@ Pas besoin de renvoyer ton nom, ton adresse ou une nouvelle facture. Merci !
 
 Le 9 octobre 2026, retrait des synthèses tirées du document de fonctionnement interne des pages publiques et des fichiers de travail versionnés. Ne pas publier de document interne ou de détails sur les outils, équipes et procédures de REGARTS sans confirmation des informations destinées au public. Demander une formulation publiable décrivant leur rôle et les conditions applicables aux clients Big Brothers. Les coordonnées de la structure déjà fournies pour la facturation sont conservées. Ce retrait ne purge pas les anciennes versions de l’historique Git.
 
-## Hébergeur : dernier point de contact à confirmer
+## Hébergeur : coordonnées identifiées
 
 L’identité et l’adresse ne sont plus à demander au titulaire. Ne publier aucune facture ni coordonnée personnelle du titulaire du compte Hostinger.
 
-Hostinger indique ne pas proposer de support téléphonique. Cela ne permet pas de déduire le numéro à faire figurer dans les mentions légales. Demander au support, depuis hPanel : « Mon site est hébergé par Hostinger International Ltd. Quelle coordonnée téléphonique officielle dois-je indiquer pour l’hébergeur dans les mentions légales d’un site professionnel français ? »
+Le 21 octobre 2026, vérification directe de la fiche officielle de Hostinger International Limited au RIPE NCC : +370 645 03 378, avec l’adresse chypriote correspondante. Ce numéro est intégré aux mentions avec sa source : https://www.ripe.net/membership/member-support/list-of-members/cy/hosting/. Hostinger indique ne pas proposer de support téléphonique ; le numéro d’annuaire n’est pas présenté comme une ligne d’assistance client. Aucune nouvelle demande de numéro au titulaire du site n’est nécessaire.
 
 Le contact contractuel public est compliance@hostinger.com. Les modalités de traitement des journaux techniques propres au compte restent à confirmer auprès de l’hébergeur.
 
-Les documents Hostinger transmis le 21 octobre 2026 confirment les coordonnées contractuelles et le contact de protection des données gdpr@hostinger.com. Ils ne donnent pas le numéro téléphonique recherché ni une durée précise des journaux techniques du site. Les conditions de remboursement Hostinger et la procédure NPRD ne remplacent pas le contrat DJ, les CGV Big Brothers ou les informations à obtenir de REGARTS.
+Les documents Hostinger transmis le 21 octobre 2026 confirment les coordonnées contractuelles et le contact de protection des données gdpr@hostinger.com. Ils ne donnent pas de durée précise des journaux techniques du site. Le numéro téléphonique a été trouvé séparément dans l’annuaire officiel du RIPE NCC. Les conditions de remboursement Hostinger et la procédure NPRD ne remplacent pas le contrat DJ, les CGV Big Brothers ou les informations à obtenir de REGARTS.

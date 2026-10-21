@@ -132,7 +132,7 @@ Le parcours est : modification de `main` → vérifications GitHub Actions → m
 
 Pour relancer la préparation : **Actions → Prepare Hostinger deployment → Run workflow**. Le succès du workflow confirme la préparation de la branche ; vérifier également le résultat dans l’historique Git de Hostinger et sur le domaine public. Conserver la liaison GitHub/Hostinger et son option de déploiement automatique activées.
 
-Les pages juridiques publiques de `dist/` mentionnent l’hébergement de production chez Hostinger et restent provisoires. L’entité Hostinger International Ltd., son adresse chypriote et sa TVA ont été confirmées le 21 octobre 2026 par la facture Premium fournie et les sources officielles. Le téléphone de l’hébergeur reste à confirmer ; les coordonnées personnelles du titulaire et les factures ne sont pas publiées.
+Les pages juridiques publiques de `dist/` mentionnent l’hébergement de production chez Hostinger et restent provisoires. L’entité Hostinger International Ltd., son adresse chypriote et sa TVA ont été confirmées le 21 octobre 2026 par la facture Premium fournie et les sources officielles. Le téléphone +370 645 03 378 est publié sur la fiche officielle de Hostinger International Limited au RIPE NCC, vérifiée le même jour. Les coordonnées personnelles du titulaire et les factures ne sont pas publiées.
 
 ### Copie de prévisualisation : GitHub Pages
 

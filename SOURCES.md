@@ -35,6 +35,8 @@ Logo officiel fourni et demandé par le client : Logo-DJ-Big-Brothers.webp, copi
 
 - La facture Premium fournie à titre privé confirme Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre, TVA CY10301365E. Les factures et les coordonnées personnelles du titulaire ne sont pas intégrées au dépôt.
 - [Conditions officielles Hostinger, sections 2 et 24](https://www.hostinger.com/fr/legal/termes-universels-de-contrat-de-service) : entité chypriote, adresse et contact contractuel compliance@hostinger.com.
-- [Support téléphonique Hostinger](https://www.hostinger.com/support/1583604-is-phone-support-available-at-hostinger/) : absence de support téléphonique annoncée. Aucun numéro de téléphone d’hébergeur n’est déduit de cette page ; le numéro destiné aux mentions légales reste à confirmer.
+- [Support téléphonique Hostinger](https://www.hostinger.com/support/1583604-is-phone-support-available-at-hostinger/) : absence de support téléphonique annoncée. Cette page ne fournit pas de numéro ; le contact de l’annuaire RIPE NCC ci-dessous n’est pas présenté comme une ligne d’assistance client.
 
 - [Politique de confidentialité Hostinger](https://www.hostinger.com/legal/privacy-policy), également fournie en PDF le 21 octobre 2026 : contact gdpr@hostinger.com pour les traitements propres à Hostinger. Les dispositions concernant le compte Hostinger ou sa plateforme ne sont pas transposées aux dossiers clients DJ.
+
+- [Fiche officielle RIPE NCC de Hostinger International Limited](https://www.ripe.net/membership/member-support/list-of-members/cy/hosting/), vérifiée directement le 21 octobre 2026 : téléphone +37064503378, adresse 61 Lordou Vyronos, Lumiel Building, 4th floor, 6023 Larnaca, Cyprus. Le numéro est présenté sur le site avec cette provenance, sans affirmer qu’il s’agit du support téléphonique ou qu’un appel a été testé.
