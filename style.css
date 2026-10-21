@@ -234,13 +234,13 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 .social-link:hover,.social-link:focus-visible{color:var(--accent)}
 .contact-social{margin:1rem 0 0}
 
-/* Portraits fournis par le client ; cadrage visuel sans retouche des photos. */
+/* Portraits sur fond commun ; Sophie utilise un fichier avec transparence. */
 .agency-intro{max-width:52rem}
 .agency-portraits{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;margin-top:1.5rem}
 .dj-portrait{margin:0;min-width:0;background:var(--panel);border:1px solid var(--line)}
 .dj-portrait-image{aspect-ratio:4/3;overflow:hidden}
 .dj-portrait-image img{display:block;width:100%;height:100%;object-fit:cover}
-.dj-portrait-image--sophie img{object-position:53% 53%;transform:scale(2.3);transform-origin:53% 40%}
+.dj-portrait-image--sophie img{object-fit:contain;object-position:center bottom}
 .dj-portrait figcaption{position:static;z-index:auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-top:2px solid var(--accent)}
 .dj-portrait figcaption strong{font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
 .dj-portrait figcaption span{color:var(--accent);font-size:.875rem}
