@@ -241,7 +241,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 .dj-portrait-image{aspect-ratio:4/3;overflow:hidden}
 .dj-portrait-image img{display:block;width:100%;height:100%;object-fit:cover}
 .dj-portrait-image--thao img{object-position:left bottom;transform:translateX(.2%)}
-.dj-portrait-image--sophie img{object-fit:contain;object-position:center bottom}
+/* The cutout has a thin transparent lower margin; tuck it below the frame. */
+.dj-portrait-image--sophie img{object-fit:contain;object-position:center bottom;transform:translateY(.8%)}
 .dj-portrait figcaption{position:static;z-index:auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-top:2px solid var(--accent)}
 .dj-portrait figcaption strong{font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
 .dj-portrait figcaption span{color:var(--accent);font-size:.875rem}
