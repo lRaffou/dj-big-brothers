@@ -1,6 +1,6 @@
 # Dernières informations pour finaliser les pages Big Brothers
 
-Mise à jour : 20 octobre 2026. Les pages publiques restent provisoires ; les versions de travail conservent les notes à compléter. Polices, couleurs et navigation sont harmonisées avec le site.
+Mise à jour : 21 octobre 2026. Les pages publiques restent provisoires ; les versions de travail conservent les notes à compléter. Polices, couleurs et navigation sont harmonisées avec le site.
 
 ## Déjà renseigné — inutile de le redemander
 
@@ -13,7 +13,7 @@ Mise à jour : 20 octobre 2026. Les pages publiques restent provisoires ; les ve
 - Source publique DJ Big Brothers vérifiée le 20 octobre 2026 : solde dans la semaine suivant le mariage ; déplacements inclus dans un rayon de 200 km autour de Montauban, avec frais possibles au-delà. Ces informations ont été intégrées et restent à rapprocher du contrat applicable.
 - Deux ans retenus à la demande du propriétaire : après le dernier contact venant du demandeur pour un devis sans réservation ; après la fin de la prestation pour le suivi client (clôture de la réservation en cas d’annulation). Les archives légales/contentieuses restent distinctes.
 - Gmail confirmé pour gérer les demandes à djbigbrothers.music@gmail.com.
-- GitHub Pages, formulaire mailto, Gmail pour la réception, ressources locales et absence de traceur dans le code du site.
+- Hébergement de production chez Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre ; TVA CY10301365E. Identité et adresse confirmées par la facture Premium fournie et les sources officielles. GitHub Pages conserve une prévisualisation. Formulaire mailto, Gmail pour la réception, ressources locales et absence de traceur dans le code du site.
 - Aucune prestation vidéo ni implication de Jessica Nadim dans cette activité. Les anciennes CGV vidéo ne sont pas utilisées.
 
 ## À demander à REGARTS par le client
@@ -48,3 +48,11 @@ Pas besoin de renvoyer ton nom, ton adresse ou une nouvelle facture. Merci !
 ## Publication des informations REGARTS
 
 Le 9 octobre 2026, retrait des synthèses tirées du document de fonctionnement interne des pages publiques et des fichiers de travail versionnés. Ne pas publier de document interne ou de détails sur les outils, équipes et procédures de REGARTS sans confirmation des informations destinées au public. Demander une formulation publiable décrivant leur rôle et les conditions applicables aux clients Big Brothers. Les coordonnées de la structure déjà fournies pour la facturation sont conservées. Ce retrait ne purge pas les anciennes versions de l’historique Git.
+
+## Hébergeur : dernier point de contact à confirmer
+
+L’identité et l’adresse ne sont plus à demander au titulaire. Ne publier aucune facture ni coordonnée personnelle du titulaire du compte Hostinger.
+
+Hostinger indique ne pas proposer de support téléphonique. Cela ne permet pas de déduire le numéro à faire figurer dans les mentions légales. Demander au support, depuis hPanel : « Mon site est hébergé par Hostinger International Ltd. Quelle coordonnée téléphonique officielle dois-je indiquer pour l’hébergeur dans les mentions légales d’un site professionnel français ? »
+
+Le contact contractuel public est compliance@hostinger.com. Les modalités de traitement des journaux techniques propres au compte restent à confirmer auprès de l’hébergeur.

@@ -29,3 +29,10 @@ Les deux pages publiques DJ et tarifs de YO Production ont été relues. Coordon
 Le bloc de 16 avis sur la page d’origine est ancien : les 31 avis confirmés par le propriétaire sont conservés. L’offre combinée vidéo YO Production + DJ avec remise de 5 % reste à confirmer pour ce site indépendant ; elle n’est pas présentée comme une prestation vidéo de Big Brothers.
 
 Logo officiel fourni et demandé par le client : Logo-DJ-Big-Brothers.webp, copié sans modification dans dist/assets/logo-dj-big-brothers.webp. À la demande du propriétaire, une version détourée sur fond transparent et recadrée au plus près du logo a ensuite été créée par retrait du blanc et recadrage du fichier original (les essais de détourage imagegen n’ont pas été retenus) : dist/assets/logo-dj-big-brothers-transparent.webp. Le fichier original reste conservé comme référence. Les icônes du navigateur et Apple utilisent la version transparente.
+
+
+## Hébergement de production — vérification du 21 octobre 2026
+
+- La facture Premium fournie à titre privé confirme Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Chypre, TVA CY10301365E. Les factures et les coordonnées personnelles du titulaire ne sont pas intégrées au dépôt.
+- [Conditions officielles Hostinger, sections 2 et 24](https://www.hostinger.com/fr/legal/termes-universels-de-contrat-de-service) : entité chypriote, adresse et contact contractuel compliance@hostinger.com.
+- [Support téléphonique Hostinger](https://www.hostinger.com/support/1583604-is-phone-support-available-at-hostinger/) : absence de support téléphonique annoncée. Aucun numéro de téléphone d’hébergeur n’est déduit de cette page ; le numéro destiné aux mentions légales reste à confirmer.
