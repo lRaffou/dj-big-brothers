@@ -1,6 +1,6 @@
 
 /* Mobile first: single-column defaults, then tablet and desktop enhancements. */
-:root{--bg:#141414;--panel:#202020;--text:#f7f7f0;--muted:#b7b7b1;--accent:#e5ff50;--line:#3c3c37;color-scheme:dark}
+:root{--bg:#141414;--panel:#202020;--text:#f7f7f0;--muted:#b7b7b1;--accent:#d7b44a;--line:#3c3c37;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:var(--navigation-offset,2rem)}
 body{overflow-wrap:anywhere;hyphens:auto;margin:0;background:var(--bg);color:var(--text);font:1rem/1.6 'DM Sans',Arial,sans-serif}
@@ -59,10 +59,6 @@ h3{hyphens:none;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif;margin:1rem 0
 .service-note a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline}
 .about{gap:2.5rem;padding-top:0;align-items:center}
 .about p:not(.eyebrow){color:var(--muted)}
-.portrait{width:100%;min-width:0;position:relative;background:var(--accent);min-height:22.5rem;aspect-ratio:1.15;overflow:hidden;color:#151515}
-.portrait-word{font:800 clamp(5rem,23vw,8.4rem)/1 'Barlow Condensed',sans-serif;position:absolute;left:1.5rem;top:1.25rem}
-.portrait img{position:absolute;bottom:2.5rem;left:0;width:108%;height:auto;max-width:none}
-.portrait-caption{position:absolute;bottom:.9rem;left:1.25rem;right:1.25rem;font-size:.75rem;letter-spacing:.07rem}
 .text-link{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;font-size:.875rem;border-bottom:1px solid;padding:.6rem 0;margin-top:.6rem}
 .reviews{background:var(--panel)}
 .review-heading .text-link{margin:0}
@@ -126,7 +122,7 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .hero-bottom a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:.75rem;letter-spacing:.09rem}
 .section-heading{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem 3rem}
 .services{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2.5rem}.services article{padding:1.875rem 1.5rem 1.5rem 0}.services article+article{padding-left:1.5rem;border-top:0;border-left:1px solid var(--line)}.services h3{margin-top:2rem}
-.about{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.5rem;padding-top:1rem}.portrait{min-height:25rem}.portrait-word{font-size:7rem}
+.about{gap:2.5rem;padding-top:1rem}
 .review-grid,.price-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem}.price-card{padding:1.75rem}
 .form-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
 .ribbon span{font-size:2.375rem}footer p{width:auto}
@@ -135,12 +131,12 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .header{flex-wrap:nowrap}.header nav{display:flex;order:0;flex-wrap:wrap;width:auto;gap:1.5rem;border:0;padding:0;overflow:visible;scroll-snap-type:none}.header nav a{padding-inline:0}
 .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0 2.5rem;padding-top:2.25rem}.hero-copy{padding-block:2.125rem 1.25rem}.hero h1{font-size:clamp(3rem,6vw,5.25rem)}
 .intro{font-size:1.125rem}.hero-photo{aspect-ratio:auto;min-height:37rem}.hero-photo>img{object-position:center 53%}.hero-bottom{padding:1.875rem 0 2.5rem}
-.section{padding-block:5.9375rem}.section-heading{column-gap:5rem}.about{padding-top:1rem;gap:5.625rem}.portrait{min-height:28rem}.portrait-word{font-size:8.4rem}
+.section{padding-block:5.9375rem}.section-heading{column-gap:5rem}.about{padding-top:1rem;gap:5.625rem}
 .review-heading{display:flex;justify-content:space-between;align-items:end;gap:1.875rem}.review-heading .text-link{margin-bottom:1.875rem}.review-grid{gap:4rem}blockquote{font-size:1.375rem}
 .contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:4rem}.price-card{padding:2.2rem}.price{font-size:4.5rem}
 }
 @media(min-width:93.75rem){.wrap{padding-inline:3.75rem}}
-@media(hover:hover){.button:hover{background:#f0ff99;transform:translateY(-2px)}}
+@media(hover:hover){.button:hover{background:#e8cd7b;transform:translateY(-2px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 /* Two identical groups create a seamless, constant-speed loop. */
@@ -172,9 +168,7 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .about .agency-residency{border-left:2px solid var(--accent);padding-left:1rem}
 .agency-team{grid-column:1/-1;border-top:1px solid var(--line);padding-top:1.5rem;min-width:0}
 .agency-team h3{margin-top:0}
-.agency-team ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;list-style:none;padding:0;margin:1.5rem 0}
-.agency-team li{border:1px solid var(--line);padding:1rem;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
-@media(min-width:48rem){.agency-services ul{grid-template-columns:repeat(2,minmax(0,1fr))}.agency-team ul{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:48rem){.agency-services ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* Wedding Awards badge: original image and a readable link if unavailable. */
 .review-award{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;width:fit-content;max-width:100%;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
@@ -239,3 +233,15 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 .social-link .icon{width:1.125rem;height:1.125rem}
 .social-link:hover,.social-link:focus-visible{color:var(--accent)}
 .contact-social{margin:1rem 0 0}
+
+/* Portraits fournis par le client ; cadrage visuel sans retouche des photos. */
+.agency-intro{max-width:52rem}
+.agency-portraits{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;margin-top:1.5rem}
+.dj-portrait{margin:0;min-width:0;background:var(--panel);border:1px solid var(--line)}
+.dj-portrait-image{aspect-ratio:4/3;overflow:hidden}
+.dj-portrait-image img{display:block;width:100%;height:100%;object-fit:cover}
+.dj-portrait-image--sophie img{object-position:53% 53%;transform:scale(2.3);transform-origin:53% 40%}
+.dj-portrait figcaption{position:static;z-index:auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-top:2px solid var(--accent)}
+.dj-portrait figcaption strong{font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
+.dj-portrait figcaption span{color:var(--accent);font-size:.875rem}
+@media(min-width:30rem){.agency-portraits{grid-template-columns:repeat(2,minmax(0,1fr))}}
