@@ -19,8 +19,8 @@ h1{font:700 clamp(2.5rem,7vw,4.5rem)/1.08 'Barlow Condensed',sans-serif;margin:1
 .error-button:hover{background:#e8cd7b;color:#151515}
 .error-contact{color:var(--muted);font-size:.875rem}
 .error-contact a{display:inline-block;padding-block:.5rem}
-.error-footer{border-top:1px solid var(--line);padding-block:1.5rem 2rem;color:var(--muted);font-size:.875rem}
+.error-footer{text-align:center;border-top:1px solid var(--line);padding-block:1.5rem 2rem;color:var(--muted);font-size:.875rem}
 .error-footer p{margin:0 0 .75rem}
-.error-footer nav{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem}
+.error-footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:.25rem 1.5rem}
 .error-footer a{display:inline-flex;align-items:center;min-height:2.75rem}
 @media(max-width:24rem){.error-actions{align-items:stretch;flex-direction:column}}
