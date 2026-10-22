@@ -78,8 +78,8 @@ input,textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:3r
 textarea{resize:vertical}
 form .button{width:100%;text-align:left}
 .form-help,#form-status{font-size:.875rem;color:var(--muted);line-height:1.6}
-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.25rem;padding-block:1.875rem 2.25rem;border-top:1px solid var(--line)}
-.footer-brand{font-size:1.5rem;display:inline-flex;align-items:center}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;text-align:center;gap:.5rem 1.25rem;padding-block:1.875rem 4.75rem;border-top:1px solid var(--line)}
+.footer-brand{font-size:1.5rem;display:inline-flex;align-items:center;justify-content:center;flex-basis:100%}
 footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .skip{position:fixed;top:-100px;left:1rem;padding:.6rem;background:var(--accent);color:#111;z-index:40}
 .skip:focus{top:.6rem}
@@ -125,7 +125,7 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .about{gap:2.5rem;padding-top:1rem}
 .review-grid,.price-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem}.price-card{padding:1.75rem}
 .form-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
-.ribbon span{font-size:2.375rem}footer p{width:auto}
+.ribbon span{font-size:2.375rem}
 }
 @media(min-width:64rem){
 .header{flex-wrap:nowrap}.header nav{display:flex;order:0;flex-wrap:wrap;width:auto;gap:1.5rem;border:0;padding:0;overflow:visible;scroll-snap-type:none}.header nav a{padding-inline:0}
