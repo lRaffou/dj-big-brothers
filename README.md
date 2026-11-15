@@ -181,4 +181,12 @@ Validation du footer : 13 tests automatisés réussis, 16 affichages de footer e
 
 ### Alignement des formules
 
-`initPricingAlignment()` dans `dist/script.js` harmonise la hauteur des lignes fixes des deux cartes lorsqu'elles sont côte à côte (titres, prix, horaires, listes, résumés et boutons). Le texte dépliable n'est pas synchronisé : ouvrir un détail agrandit uniquement sa carte. Sur une colonne, les hauteurs ajoutées sont supprimées pour conserver un espacement naturel. Les mesures sont recalculées après chargement des polices et changement de largeur, via le planificateur par frame existant. Sans JavaScript, les cartes restent lisibles et les éléments details natifs fonctionnent avec leur hauteur naturelle.
+`initCardRowAlignment()` dans `dist/script.js` harmonise la hauteur des lignes fixes des deux cartes lorsqu'elles sont côte à côte (titres, prix, horaires, listes, résumés et boutons). Le texte dépliable n'est pas synchronisé : ouvrir un détail agrandit uniquement sa carte. Sur une colonne, les hauteurs ajoutées sont supprimées pour conserver un espacement naturel. Les mesures sont recalculées après chargement des polices et changement de largeur, via le planificateur par frame existant. Sans JavaScript, les cartes restent lisibles et les éléments details natifs fonctionnent avec leur hauteur naturelle.
+
+
+### Cohérence responsive
+
+L'alignement des lignes fixes est partagé entre les formules et les trois prestations via `initCardRowAlignment()`. Les prestations et les en-têtes de section passent en colonnes à partir de 64 rem pour éviter les mots coupés sur tablette. Les citations gardent leurs auteurs alignés dans les grilles d'avis. Les légendes des portraits utilisent des colonnes adaptatives, identiques pour Thao et Sophie. Les champs prénom, date et lieu ont la même hauteur, y compris avec le sélecteur de date natif.
+
+
+Audit du 15 novembre 2026 : six pages publiques vérifiées dans Chromium (Edge) et WebKit, de 320 à 1 920 px, avec contrôles du texte à 200 % (168 configurations). Aucun débordement horizontal, ressource image manquante ou erreur JavaScript détecté. Contrôles complémentaires réussis sur les ancres, le suivi de section, les flèches du menu, le clavier, le formulaire, les barres juridiques fixes et l'ouverture indépendante des formules. Il s'agit d'essais dans ces moteurs de navigateur, pas d'une certification de tous les appareils physiques.
