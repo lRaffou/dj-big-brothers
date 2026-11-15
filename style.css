@@ -48,7 +48,7 @@ h3{hyphens:none;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif;margin:1rem 0
 .section-heading{gap:1.5rem}
 .section-heading .eyebrow{grid-column:1/-1;margin-bottom:0}
 .section-heading h2{margin-bottom:0}
-.section-heading>p:last-child{align-self:center;color:var(--muted);max-width:23rem}
+.section-heading>p:last-child{align-self:center;color:var(--muted);max-width:42rem}
 .services{margin-top:1.5rem;border-block:1px solid var(--line)}
 .services article{padding:1.5rem 0;min-width:0}
 .services article+article{border-top:1px solid var(--line)}
@@ -63,8 +63,9 @@ h3{hyphens:none;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif;margin:1rem 0
 .reviews{background:var(--panel)}
 .review-heading .text-link{margin:0}
 .review-grid{gap:1.25rem;margin-top:1.875rem}
-.review-grid article{border-top:1px solid #ffffff40;padding-top:1.875rem;min-width:0}
+.review-grid article{display:flex;flex-direction:column;align-items:flex-start;border-top:1px solid #ffffff40;padding-top:1.875rem;min-width:0}
 blockquote{font-size:1.3125rem;line-height:1.55;margin:1.5rem 0;max-width:31rem}
+.review-grid blockquote{flex:1}
 .review-grid article>p{font-size:.875rem}
 .review-grid article>p span,.review-source{color:var(--muted)}
 .review-source{font-size:.75rem;margin-top:1.875rem}
@@ -75,6 +76,7 @@ blockquote{font-size:1.3125rem;line-height:1.55;margin:1.5rem 0;max-width:31rem}
 form{padding-top:.5rem;min-width:0}
 label{display:block;min-width:0;max-width:100%;font-size:.875rem;margin-bottom:1.25rem}
 input,textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:3rem;margin-top:.6rem;background:#202020;border:1px solid #44443c;border-radius:0;padding:.875rem;color:var(--text);font:1rem/1.4 'DM Sans',sans-serif}
+input{height:calc(3.15rem + 2px)}
 textarea{resize:vertical}
 form .button{width:100%;text-align:left}
 .form-help,#form-status{font-size:.875rem;color:var(--muted);line-height:1.6}
@@ -120,14 +122,15 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 .wrap{padding-inline:5%}.header{padding-block:1.625rem}.brand{font-size:1.875rem}.button.small{padding:.8rem 1.1rem}
 .section{padding-block:5rem}.hero{padding-top:2rem}.hero h1{font-size:5.625rem}.hero-photo{aspect-ratio:16/9}
 .hero-bottom a{display:inline-flex;align-items:center;min-height:2.75rem;font-size:.75rem;letter-spacing:.09rem}
-.section-heading{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem 3rem}
-.services{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2.5rem}.services article{padding:1.875rem 1.5rem 1.5rem 0}.services article+article{padding-left:1.5rem;border-top:0;border-left:1px solid var(--line)}.services h3{margin-top:2rem}
 .about{gap:2.5rem;padding-top:1rem}
 .review-grid,.price-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem}.price-card{padding:1.75rem}
 .form-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
 .ribbon span{font-size:2.375rem}
 }
 @media(min-width:64rem){
+.section-heading{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:1.5rem 3rem}
+.section-heading>p:last-child{max-width:23rem}
+.services{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2.5rem}.services article{padding:1.875rem 1.5rem 1.5rem 0}.services article+article{padding-left:1.5rem;border-top:0;border-left:1px solid var(--line)}.services h3{margin-top:2rem}
 .header{flex-wrap:nowrap}.header nav{display:flex;order:0;flex-wrap:wrap;width:auto;gap:1.5rem;border:0;padding:0;overflow:visible;scroll-snap-type:none}.header nav a{padding-inline:0}
 .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:0 2.5rem;padding-top:2.25rem}.hero-copy{padding-block:2.125rem 1.25rem}.hero h1{font-size:clamp(3rem,6vw,5.25rem)}
 .intro{font-size:1.125rem}.hero-photo{aspect-ratio:auto;min-height:37rem}.hero-photo>img{object-position:center 53%}.hero-bottom{padding:1.875rem 0 2.5rem}
@@ -206,7 +209,7 @@ footer p{width:100%;margin:.4rem 0;font-size:.875rem;color:var(--muted)}
 /* Constrain the native date control, including WebKit's intrinsic sizing. */
 .contact>*{min-width:0}
 .form-row{min-width:0;width:100%}
-input[type="date"]{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:100%;min-width:0;max-width:100%;inline-size:100%;min-inline-size:0;max-inline-size:100%;height:3rem;text-align:left}
+input[type="date"]{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:100%;min-width:0;max-width:100%;inline-size:100%;min-inline-size:0;max-inline-size:100%;height:calc(3.15rem + 2px);text-align:left}
 input[type="date"]::-webkit-date-and-time-value{min-width:0;margin:0;text-align:left}
 input[type="date"]::-webkit-datetime-edit{min-width:0;padding:0}
 input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:pointer}
@@ -243,7 +246,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{flex-shrink:0;cursor:point
 .dj-portrait-image--thao img{object-position:left bottom;transform:translateX(.2%)}
 /* The cutout has a thin transparent lower margin; tuck it below the frame. */
 .dj-portrait-image--sophie img{object-fit:contain;object-position:center bottom;transform:translateY(.8%)}
-.dj-portrait figcaption{position:static;z-index:auto;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-top:2px solid var(--accent)}
+.dj-portrait figcaption{position:static;z-index:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,7.5rem),1fr));align-items:baseline;gap:.35rem 1rem;padding:1rem 1.25rem;border-top:2px solid var(--accent)}
 .dj-portrait figcaption strong{font:600 2.2rem/1.15 'Barlow Condensed',sans-serif}
 .dj-portrait figcaption span{color:var(--accent);font-size:.875rem}
 @media(min-width:30rem){.agency-portraits{grid-template-columns:repeat(2,minmax(0,1fr))}}

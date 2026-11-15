@@ -89,12 +89,12 @@
     });
   }
 
-  function initPricingAlignment() {
-    const grid = document.querySelector('.price-grid');
-    const cards = grid ? [...grid.querySelectorAll('.price-card')] : [];
+  function initCardRowAlignment(gridSelector, cardSelector, rowSelectors) {
+    const grid = document.querySelector(gridSelector);
+    const cards = grid ? [...grid.querySelectorAll(cardSelector)] : [];
     if (cards.length < 2) return;
     // Match only the fixed content rows: expanding details must never resize the other card.
-    const rows = ['.eyebrow', 'h3', '.price', '.price-hours', 'ul', 'summary', '.button']
+    const rows = rowSelectors
       .map(selector => cards.map(card => card.querySelector(selector)))
       .filter(row => row.every(Boolean));
     const alignRows = () => {
@@ -265,6 +265,7 @@
   initRibbon();
   initBackToTop();
   initAwardImage();
-  initPricingAlignment();
+  initCardRowAlignment('.price-grid', '.price-card', ['.eyebrow', 'h3', '.price', '.price-hours', 'ul', 'summary', '.button']);
+  initCardRowAlignment('.services', 'article', ['.number', 'h3', '.service-label']);
   initNavigation();
 })();
