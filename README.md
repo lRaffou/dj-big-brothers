@@ -144,7 +144,7 @@ Le fichier `.openai/hosting.json` référence la copie Sites existante. Un envoi
 
 ## Contenus et droits
 
-Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des images. Les tarifs, conditions commerciales et mentions légales doivent être validés et tenus à jour par le propriétaire du site.
+Consulter [SOURCES.md](SOURCES.md) pour la provenance des informations et des images. L’éclairage des formules a été actualisé le 15 novembre 2026 sur confirmation du client : deux Eurolite LED KLS-120 FX Compact Light remplacent les anciennes lumières, dans l’accueil et l’aperçu juridique. Les tarifs, conditions commerciales et mentions légales doivent être validés et tenus à jour par le propriétaire du site.
 
 Les licences des polices figurent dans leurs fichiers OFL. Aucune licence générale de réutilisation du code, des photos ou des contenus n’est accordée par ce dépôt.
 Les icônes utilisent les SVG officiels Font Awesome Free 6.7.2, intégrés au HTML et servis localement. Les sources et la licence figurent dans `dist/assets/icons/fontawesome/`. Les symboles ne dépendent plus des emojis du système. Le champ date conserve le sélecteur natif de chaque navigateur, avec une largeur contrainte pour les petits écrans.

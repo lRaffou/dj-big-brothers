@@ -50,3 +50,10 @@ Le client demande une palette dorée assortie au logo et une présentation limit
 ### Portraits et noms de scène
 
 Sur demande du propriétaire, Sophie est détourée avec imagegen à partir de la photo fournie ; le fichier transparent `sophie-dj-babe-detouree.png` remplace son affichage avec décor. La photo originale reste conservée. Le propriétaire confirme le nom de scène de Thao : DJ Red Marshal.
+
+
+## Éclairage — mise à jour du 15 novembre 2026
+
+Le client a indiqué le 13 novembre 2026 que deux nouveaux ensembles Eurolite remplacent toutes les lumières précédentes. La capture du produit fournie par l'utilisateur précise le modèle : **Eurolite LED KLS-120 FX Compact Light**. Cette confirmation directe remplace les anciennes références d'éclairage provenant de YO Production.
+
+L'accueil et l'aperçu juridique indiquent désormais deux systèmes de ce modèle pour Fiesta, également inclus dans Festival via « Tous les équipements de Fiesta ». Les anciennes mentions Evo Quattro, Cameo Thunder Wash, structure lumière et lyres supplémentaires sont retirées de ces offres. Festival conserve la machine à fumée Fogburst, la projection et sa durée prolongée. Les tarifs, la sonorisation et les autres options ne sont pas modifiés. Aucune photographie de produit, caractéristique technique supplémentaire ou prix du matériel n'est repris de la capture commerciale.
