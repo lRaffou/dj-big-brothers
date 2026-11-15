@@ -22,6 +22,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .header nav a:hover,.text-link:hover{color:var(--accent)}
 .button{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;max-width:100%;padding:1rem 1.25rem;border:1px solid var(--accent);background:var(--accent);color:#151515;font:600 1rem/1.4 'DM Sans',Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
 .button span{flex-shrink:0;font-size:1.5rem;line-height:1}
+.button.availability-cta{flex-wrap:nowrap;text-align:left}
+.button .button-label{min-width:0;flex-shrink:1;font:inherit;text-wrap:balance}
 .button.small{font-size:.875rem;padding:.75rem;gap:.5rem}
 .hero,.section-heading,.services,.about,.review-grid,.contact,.form-row,.price-grid{display:grid;grid-template-columns:minmax(0,1fr)}
 .hero{gap:1.5rem;padding-top:.75rem}
@@ -53,7 +55,6 @@ h3{hyphens:none;font:600 2.2rem/1.15 'Barlow Condensed',sans-serif;margin:1rem 0
 .services article{padding:1.5rem 0;min-width:0}
 .services article+article{border-top:1px solid var(--line)}
 .number{font-size:.875rem;color:var(--accent)}
-.service-label{font-size:.75rem;letter-spacing:.1rem}
 .services article>p:last-child{color:var(--muted);max-width:28rem}
 .service-note{font-size:.875rem;color:var(--muted);margin-top:1.5rem}
 .service-note a{display:inline-flex;align-items:center;min-height:2.75rem;text-decoration:underline}

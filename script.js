@@ -266,6 +266,6 @@
   initBackToTop();
   initAwardImage();
   initCardRowAlignment('.price-grid', '.price-card', ['.eyebrow', 'h3', '.price', '.price-hours', 'ul', 'summary', '.button']);
-  initCardRowAlignment('.services', 'article', ['.number', 'h3', '.service-label']);
+  initCardRowAlignment('.services', 'article', ['.number', 'h3']);
   initNavigation();
 })();
