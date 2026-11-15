@@ -89,6 +89,36 @@
     });
   }
 
+  function initPricingAlignment() {
+    const grid = document.querySelector('.price-grid');
+    const cards = grid ? [...grid.querySelectorAll('.price-card')] : [];
+    if (cards.length < 2) return;
+    // Match only the fixed content rows: expanding details must never resize the other card.
+    const rows = ['.eyebrow', 'h3', '.price', '.price-hours', 'ul', 'summary', '.button']
+      .map(selector => cards.map(card => card.querySelector(selector)))
+      .filter(row => row.every(Boolean));
+    const alignRows = () => {
+      rows.flat().forEach(element => element.style.removeProperty('min-height'));
+      if (Math.abs(cards[0].offsetLeft - cards[1].offsetLeft) < 1) return;
+      const heights = rows.map(row => Math.max(...row.map(element => element.getBoundingClientRect().height)));
+      rows.forEach((row, index) => row.forEach(element => {
+        element.style.minHeight = `${heights[index]}px`;
+      }));
+    };
+    const scheduleAlignment = createFrameScheduler(alignRows);
+    window.addEventListener('resize', scheduleAlignment);
+    document.fonts.ready.then(scheduleAlignment);
+    if (typeof ResizeObserver !== 'undefined') {
+      let previousWidth = -1;
+      new ResizeObserver(([entry]) => {
+        if (entry.contentRect.width === previousWidth) return;
+        previousWidth = entry.contentRect.width;
+        scheduleAlignment();
+      }).observe(grid);
+    }
+    alignRows();
+  }
+
   function initAwardImage() {
     // Keep the award label and destination available if the image fails.
     const awardImage = document.querySelector('.review-award-image');
@@ -235,5 +265,6 @@
   initRibbon();
   initBackToTop();
   initAwardImage();
+  initPricingAlignment();
   initNavigation();
 })();
