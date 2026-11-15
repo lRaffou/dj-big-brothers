@@ -190,3 +190,9 @@ L'alignement des lignes fixes est partagé entre les formules et les trois prest
 
 
 Audit du 15 novembre 2026 : six pages publiques vérifiées dans Chromium (Edge) et WebKit, de 320 à 1 920 px, avec contrôles du texte à 200 % (168 configurations). Aucun débordement horizontal, ressource image manquante ou erreur JavaScript détecté. Contrôles complémentaires réussis sur les ancres, le suivi de section, les flèches du menu, le clavier, le formulaire, les barres juridiques fixes et l'ouverture indépendante des formules. Il s'agit d'essais dans ces moteurs de navigateur, pas d'une certification de tous les appareils physiques.
+
+### Avis récents et parcours de contact
+
+Le 15 novembre 2026, les deux témoignages affichés sont remplacés par des extraits vérifiés de septembre et octobre 2026, avec dates de publication et liens vers Mariages.net. Le compteur passe à 32 avis (mise à jour manuelle, provenance dans SOURCES.md). Le bouton principal « Vérifier la disponibilité de ma date » mène au formulaire de demande : il ne promet pas de calendrier de disponibilité en temps réel. Les sous-titres redondants des trois prestations sont supprimés ; les titres descriptifs et leur alignement commun sont conservés.
+
+Contrôle de cette actualisation : 13 tests automatisés réussis, plus 22 configurations Chromium/WebKit de 320 à 1 920 px avec agrandissement du texte à 200 %. Le bouton mène au contact, le texte et la flèche restent dans leur cadre, les descriptions des prestations et les auteurs des avis restent alignés sur plusieurs colonnes.
