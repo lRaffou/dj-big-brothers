@@ -152,7 +152,7 @@ Les icônes utilisent les SVG officiels Font Awesome Free 6.7.2, intégrés au H
 
 ## Pages d’erreur Hostinger
 
-`dist/.htaccess` associe les réponses 404 et 500 à `404.html` et `500.html` sans redirection externe. Les liens et ressources partent de la racine du domaine pour fonctionner sur une adresse inexistante imbriquée. Les deux pages fonctionnent sans JavaScript ; la 500 possède aussi des styles de secours intégrés et des contacts directs. La configuration serveur concerne Hostinger ; GitHub Pages ignore `.htaccess`. Les erreurs 400/403 conservent les pages standard de l’hébergeur.
+`dist/.htaccess` associe les réponses 404 et 500 à `404.html` et `500.html` sans redirection externe. Les liens internes et les ressources partent de la racine du domaine pour fonctionner sur une adresse inexistante imbriquée. Les deux pages fonctionnent sans JavaScript ; la 500 possède aussi des styles de secours intégrés et des contacts directs. La configuration serveur concerne Hostinger ; GitHub Pages ignore `.htaccess`. Les erreurs 400/403 conservent les pages standard de l’hébergeur.
 
 Contrôler une URL inexistante après publication : le statut doit rester 404, avec le contenu personnalisé. Ne pas provoquer une panne du site pour tester la page 500.
 
@@ -168,3 +168,12 @@ Hostinger redirige l'accès explicite à `/index.html` et le sous-domaine www ve
 L'image de partage `dist/assets/social-preview.png` est un rendu 1200 × 630 de `scripts/social-preview.html`, avec les polices et le logo locaux. Pour la régénérer, ouvrir ce HTML dans Chromium à cette taille, attendre le chargement des polices puis capturer le viewport à l'échelle 1.
 
 Contrôle : `node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs tests/seo.test.cjs`. Ces tests vérifient les fichiers et les invariants SEO, pas l'indexation ou le classement chez Google. Les étapes de suivi sont dans `docs/google-setup.md`.
+
+
+### Fiche Google et état de la configuration
+
+La fiche publique DJ Big Brothers est accessible à [ce lien Google](https://share.google/bRQmGRpFEtqxeNiYR). Le footer de l'accueil et des pages juridiques comporte ce lien à côté d'Instagram et de Mariages.net ; les pages 404 et 500 proposent aussi un accès à la fiche. Les liens s'ouvrent dans un nouvel onglet avec `noopener noreferrer`. Les aperçus juridiques conservent le même lien.
+
+Au 15 novembre 2026, l'utilisateur a confirmé la validation de la propriété Domaine dans Search Console, l'état « Opération effectuée » du sitemap et l'envoi de la demande d'indexation de l'accueil. Il a également confirmé l'affichage de la fiche Google en navigation privée. La demande d'indexation ne signifie pas que la page est déjà indexée. Le détail et les points restant à compléter figurent dans [le suivi Google](docs/google-setup.md).
+
+Validation du footer : 13 tests automatisés réussis, 16 affichages de footer et 16 affichages de pages d'erreur contrôlés dans Chromium/WebKit. Présence du lien confirmée sur les six pages publiques après déploiement. Une modification documentaire seule ne nécessite pas de nouvelle publication Hostinger.
