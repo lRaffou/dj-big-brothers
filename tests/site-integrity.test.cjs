@@ -59,9 +59,10 @@ test('error documents use local handlers and work at nested missing URLs without
     const html = fs.readFileSync(path.join(root, `dist/${code}.html`), 'utf8');
     assert.ok(html.includes('name="robots" content="noindex,follow"'));
     assert.ok(!/<script|http-equiv="refresh"/i.test(html));
-    const references = [...html.matchAll(/\b(?:href|src)="([^"]+)"/g)].map(match => match[1]);
-    for (const ref of references) {
-      if (/^(mailto:|tel:)/.test(ref)) continue;
+    const references = [...html.matchAll(/\b(href|src)="([^"]+)"/g)];
+    for (const [, attribute, ref] of references) {
+      // Outbound links are allowed; error-page assets must still resolve from the domain root.
+      if (attribute === 'href' && /^(https:|mailto:|tel:)/.test(ref)) continue;
       assert.ok(ref.startsWith('/'), `Relative error page URL: ${ref}`);
       const url = new URL(ref, 'https://djbigbrothers.fr/missing/nested/page');
       assert.equal(url.origin, 'https://djbigbrothers.fr');
