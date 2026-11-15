@@ -177,3 +177,8 @@ La fiche publique DJ Big Brothers est accessible à [ce lien Google](https://sha
 Au 15 novembre 2026, l'utilisateur a confirmé la validation de la propriété Domaine dans Search Console, l'état « Opération effectuée » du sitemap et l'envoi de la demande d'indexation de l'accueil. Il a également confirmé l'affichage de la fiche Google en navigation privée. La demande d'indexation ne signifie pas que la page est déjà indexée. Le détail et les points restant à compléter figurent dans [le suivi Google](docs/google-setup.md).
 
 Validation du footer : 13 tests automatisés réussis, 16 affichages de footer et 16 affichages de pages d'erreur contrôlés dans Chromium/WebKit. Présence du lien confirmée sur les six pages publiques après déploiement. Une modification documentaire seule ne nécessite pas de nouvelle publication Hostinger.
+
+
+### Alignement des formules
+
+`initPricingAlignment()` dans `dist/script.js` harmonise la hauteur des lignes fixes des deux cartes lorsqu'elles sont côte à côte (titres, prix, horaires, listes, résumés et boutons). Le texte dépliable n'est pas synchronisé : ouvrir un détail agrandit uniquement sa carte. Sur une colonne, les hauteurs ajoutées sont supprimées pour conserver un espacement naturel. Les mesures sont recalculées après chargement des polices et changement de largeur, via le planificateur par frame existant. Sans JavaScript, les cartes restent lisibles et les éléments details natifs fonctionnent avec leur hauteur naturelle.
