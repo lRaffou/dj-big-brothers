@@ -134,18 +134,11 @@ Pour relancer la préparation : **Actions → Prepare Hostinger deployment → R
 
 Les pages juridiques publiques de `dist/` mentionnent l’hébergement de production chez Hostinger et restent provisoires. L’entité Hostinger International Ltd., son adresse chypriote et sa TVA ont été confirmées le 21 octobre 2026 par la facture Premium fournie et les sources officielles. Le téléphone +370 645 03 378 est publié sur la fiche officielle de Hostinger International Limited au RIPE NCC, vérifiée le même jour. Les coordonnées personnelles du titulaire et les factures ne sont pas publiées.
 
-### Copie de prévisualisation : GitHub Pages
+### Ancienne adresse : GitHub Pages
 
-Le workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) contrôle la syntaxe JavaScript, les validations du formulaire et les liens locaux avant de publier uniquement `dist/` sur GitHub Pages, sans compilation. Il utilise Node.js 24 et les versions actuelles des actions Pages. Un test en échec bloque la publication.
+Le workflow `.github/workflows/pages.yml` teste le site puis exécute `scripts/prepare-pages-redirects.cjs`. Il publie des pages de redirection HTML immédiate vers `https://djbigbrothers.fr/`, en conservant les chemins des pages connues, les paramètres et les ancres lorsque JavaScript est actif. Le lien visible et la redirection HTML fonctionnent sans JavaScript. GitHub Pages ne permet pas une redirection HTTP 301 via `.htaccess` ; ne pas rétablir la copie complète de `dist/`, qui dupliquerait le contenu public. Sa page 404 reste une vraie page introuvable avec un lien vers le site officiel.
 
-- Une modification de `dist/`, des tests, des brouillons juridiques ou du workflow envoyée sur `main` déclenche les vérifications puis une publication.
-- Une modification du README seul ne déclenche pas de publication du site.
-- Pour republier manuellement : **Actions → Publish website to GitHub Pages → Run workflow**, puis sélectionner `main`.
-- Dans **Settings → Pages**, la source de publication est **GitHub Actions**.
-
-Suivre le résultat et les erreurs éventuelles dans les [exécutions du workflow](https://github.com/lRaffou/dj-big-brothers/actions/workflows/pages.yml). Le site est accessible à [lraffou.github.io/dj-big-brothers](https://lraffou.github.io/dj-big-brothers/) après une exécution réussie.
-
-Conserver les chemins relatifs des styles, scripts, images et polices pour que le site fonctionne sous `/dj-big-brothers/`.
+Le workflow se déclenche après une modification de `dist/`, `scripts/`, `tests/`, `drafts/legal/` ou de son fichier YAML sur `main`. La publication manuelle reste disponible dans GitHub Actions. Hostinger continue de recevoir uniquement `dist/` via la branche `hostinger`.
 
 Le fichier `.openai/hosting.json` référence la copie Sites existante. Un envoi sur GitHub ne met pas à jour cette copie : sa publication se fait séparément via Sites. Ce fichier n’est pas inclus dans le site GitHub Pages.
 
@@ -162,3 +155,16 @@ Les icônes utilisent les SVG officiels Font Awesome Free 6.7.2, intégrés au H
 `dist/.htaccess` associe les réponses 404 et 500 à `404.html` et `500.html` sans redirection externe. Les liens et ressources partent de la racine du domaine pour fonctionner sur une adresse inexistante imbriquée. Les deux pages fonctionnent sans JavaScript ; la 500 possède aussi des styles de secours intégrés et des contacts directs. La configuration serveur concerne Hostinger ; GitHub Pages ignore `.htaccess`. Les erreurs 400/403 conservent les pages standard de l’hébergeur.
 
 Contrôler une URL inexistante après publication : le statut doit rester 404, avec le contenu personnalisé. Ne pas provoquer une panne du site pour tester la page 500.
+
+
+## Référencement
+
+L'accueil déclare son URL canonique, des métadonnées de partage et un graphe JSON-LD Organization / WebSite / Service. Les coordonnées correspondent aux contacts visibles ; aucun horaire, statut juridique, avis agrégé ou établissement recevant du public n'est inventé. Les pages juridiques et d'erreur conservent leur directive noindex et ne figurent pas dans le sitemap.
+
+`dist/sitemap.xml` liste l'accueil, seule page de contenu indexable actuelle. Les ancres ne sont pas des pages distinctes. Ajouter une future page utile et indexable avec sa propre URL canonique ; modifier lastmod seulement après une modification significative de son contenu. `dist/robots.txt` indique l'emplacement du sitemap.
+
+Hostinger redirige l'accès explicite à `/index.html` et le sous-domaine www vers l'URL principale. L'hébergeur assure HTTPS. Vérifier les statuts 301, la conservation des paramètres et le maintien d'un vrai 404 après toute modification serveur.
+
+L'image de partage `dist/assets/social-preview.png` est un rendu 1200 × 630 de `scripts/social-preview.html`, avec les polices et le logo locaux. Pour la régénérer, ouvrir ce HTML dans Chromium à cette taille, attendre le chargement des polices puis capturer le viewport à l'échelle 1.
+
+Contrôle : `node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs tests/seo.test.cjs`. Ces tests vérifient les fichiers et les invariants SEO, pas l'indexation ou le classement chez Google. Les étapes de suivi sont dans `docs/google-setup.md`.

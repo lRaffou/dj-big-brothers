@@ -1,3 +1,14 @@
+# Redirect only explicit index.html requests, never internal DirectoryIndex resolution.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://djbigbrothers.fr/ [R=301,L]
+
+# Keep paths and query strings when consolidating the www host.
+RewriteCond %{HTTP_HOST} ^www\.djbigbrothers\.fr(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://djbigbrothers.fr%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 # Local error documents preserve the HTTP status and the requested URL.
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html

@@ -6,6 +6,7 @@ on:
     paths:
       - 'dist/**'
       - 'tests/**'
+      - 'scripts/**'
       - 'drafts/legal/**'
       - '.github/workflows/hostinger.yml'
   workflow_dispatch:
@@ -36,7 +37,7 @@ jobs:
           node --check dist/script.js
           node --check dist/contact-validation.js
           node --check dist/legal-navigation.js
-          node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs
+          node --test tests/contact-validation.test.cjs tests/site-integrity.test.cjs tests/seo.test.cjs
       - name: Publish only the website to the Hostinger branch
         shell: bash
         run: |
